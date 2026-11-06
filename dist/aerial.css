@@ -1,0 +1,14 @@
+/* Oakland County: streets, neighbors, and service. */
+.hero{position:relative;isolation:isolate;overflow:hidden;background:#142d3a}
+.aerial-background{position:absolute;inset:0;z-index:-2;pointer-events:none;background:#142d3a}
+.aerial-image{width:100%;height:100%;object-fit:cover;object-position:50% 56%;display:block}
+.hero:after{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,#0a203c99,#10243529 70%),linear-gradient(180deg,#10243533,#10243518 60%,#102435a8)}
+.hero .glass-panel{background:#102b42c4;border-color:#ffffff45;backdrop-filter:blur(5px);box-shadow:0 16px 55px #061b3024}
+.hero-copy.collective-hero h1 em{color:#f0cb83}
+.hero-copy.collective-hero .hero-intro,.hero-stats span{color:#f6f5ef}
+.hero .small-dot{background:#f0cb83}
+.aerial-location{position:absolute;bottom:31px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.06em;color:#fff8ea;margin:0;text-align:center}
+.hero-scroll,.animation-toggle{color:#fff8ea}.animation-toggle{border-color:#fff8ea80}
+.aerial-credit{padding-top:15px;padding-bottom:25px;font-size:10px;line-height:1.8;color:var(--muted)}
+.aerial-credit a{text-decoration:underline;text-underline-offset:3px}
+@media(max-width:700px){.aerial-image{object-position:60% 50%}.hero .glass-panel{background:#102b42cc}.aerial-location{position:relative;left:auto;bottom:auto;transform:none;margin:0 20px 26px;text-align:left;font-size:9px}.hero-copy.collective-hero h1{font-size:clamp(36px,10vw,46px);line-height:1.1}.hero .hero-scroll{bottom:23px}.hero .animation-toggle{bottom:18px}.aerial-credit{font-size:9px}}

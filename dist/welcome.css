@@ -1,0 +1,40 @@
+/* A light welcome with community service beside the introduction. */
+.hero.hero-welcome{min-height:0;padding-bottom:0;background:radial-gradient(ellipse at 100% 0%,#dfe8d7 0,transparent 60%),#f7f4ed;color:#163b31}
+.hero.hero-welcome:after{display:none}
+.hero-welcome .hero-copy.collective-hero{grid-template-columns:1.05fr 1fr;gap:clamp(32px,5vw,72px);align-items:center;padding-top:155px;padding-bottom:54px}
+.hero-welcome .hero-message{min-height:0;padding:0;background:transparent;border:0;box-shadow:none;backdrop-filter:none;border-radius:0}
+.hero-welcome .hero-copy.collective-hero h1{font-size:clamp(42px,4.3vw,66px);line-height:1.08;margin-bottom:26px}
+.hero-welcome .hero-copy.collective-hero h1 em{color:#3d6849}
+.hero-welcome .hero-copy.collective-hero .eyebrow{color:#476650;margin-top:0;margin-bottom:26px}
+.hero-welcome .small-dot{background:#78a75d}
+.hero-welcome .hero-copy.collective-hero .hero-intro{color:#4b6053;max-width:490px;font-size:15px;line-height:1.85;margin-bottom:30px}
+.hero-welcome .hero-message .actions{gap:14px}
+.hero-welcome .button.cream{background:#163b31;color:#fffdf5;padding:16px 25px}
+.hero-welcome .button.cream:hover{background:#245447}
+.hero-welcome .hero-secondary{color:#163b31;border-color:#163b3140;background:#ffffff60;padding:15px 21px}
+.hero-welcome .hero-secondary:hover{background:#fffdf5}
+.hero-welcome .aerial-panel{position:relative;isolation:isolate;min-width:0;height:470px;border:8px solid #fffdf5;border-radius:36px;overflow:hidden;box-shadow:0 18px 60px #163b311a;background:#d9e3d2}
+.hero-welcome .aerial-background{inset:0;z-index:0}
+.hero-welcome .aerial-panel:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#102c2526,transparent 45%,#102c25c9);z-index:1;pointer-events:none}
+.hero-welcome .aerial-image{object-position:50% 50%}
+.aerial-panel-label{position:absolute;z-index:2;top:23px;left:23px;padding:8px 13px;border-radius:30px;background:#fffdf5ed;color:#163b31;font-size:10px;letter-spacing:.04em}
+.hero-welcome .aerial-location{position:absolute;z-index:2;bottom:26px;left:25px;transform:none;text-align:left;color:#fffdf5;font-size:11px;letter-spacing:0;line-height:1.7;padding:0;margin:0}
+.hero-welcome .aerial-location strong{display:block;font-size:15px;font-weight:500}
+.hero-welcome .animation-toggle{z-index:2;right:23px;bottom:29px;left:auto;color:#fffdf5;border-color:#fffdf580;font-size:9px}
+.hero-welcome .hero-stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;max-width:1180px;margin:0 auto;padding:28px 0 34px;border-top:1px solid #163b3126}
+.hero-welcome .hero-stats>.glass-panel{min-height:0;border:0;border-left:1px solid #163b3126;border-radius:0;background:transparent;box-shadow:none;backdrop-filter:none;padding:5px 24px}
+.hero-welcome .hero-stats>.glass-panel:first-child{border-left:0;padding-left:0}
+.hero-welcome .hero-stats .total-volunteer-hours{grid-column:auto}
+.hero-welcome .hero-stats strong{color:#163b31;font-size:33px;margin-bottom:10px}
+.hero-welcome .hero-stats span{color:#4b6053;font-size:11px;line-height:1.65;max-width:170px}
+@media(max-width:1000px){.hero-welcome .hero-copy.collective-hero{gap:30px}.hero-welcome .aerial-panel{height:450px}.hero-welcome .aerial-location{bottom:65px}.hero-welcome .animation-toggle{right:auto;left:25px;bottom:25px}.hero-welcome .hero-stats>.glass-panel{padding-inline:16px}.hero-welcome .hero-stats strong{font-size:29px}}
+@media(max-width:700px){.hero-welcome .hero-copy.collective-hero{grid-template-columns:1fr;padding-top:120px;padding-bottom:28px;gap:30px}.hero-welcome .hero-copy.collective-hero h1{font-size:clamp(37px,10vw,52px);line-height:1.08;margin-bottom:23px}.hero-welcome .hero-copy.collective-hero .eyebrow{font-size:8px;margin-bottom:24px}.hero-welcome .hero-copy.collective-hero .hero-intro{font-size:14px;line-height:1.85;padding:0;margin-bottom:25px}.hero-welcome .hero-message .actions{gap:10px}.hero-welcome .hero-message .button{padding:14px 20px;font-size:12px}.hero-welcome .hero-secondary{font-size:11px;padding:14px 17px}.hero-welcome .aerial-panel{height:310px;border-width:6px;border-radius:27px}.aerial-panel-label{top:18px;left:18px;font-size:9px}.hero-welcome .aerial-location{left:19px;bottom:60px}.hero-welcome .animation-toggle{left:19px;bottom:20px}.hero-welcome .hero-stats{width:calc(100% - 40px);grid-template-columns:1fr 1fr;padding:12px 0 22px}.hero-welcome .hero-stats>.glass-panel,.hero-welcome .hero-stats>.glass-panel:first-child{padding:19px 12px;border-left:0;border-bottom:1px solid #163b311a}.hero-welcome .hero-stats>.glass-panel:last-child{grid-column:1/-1;border-bottom:0}.hero-welcome .hero-stats strong{font-size:31px}.hero-welcome .hero-stats span{font-size:11px;max-width:100%}}
+
+.join-arrow{display:block;flex-shrink:0}
+.scout-inline-link{color:#163b31;text-decoration:underline;text-underline-offset:4px}.team-scouts{scroll-margin-top:110px}.team-scouts .team-profile{background:#eef2e8}.team-scouts .team-monogram{background:#dfe8d7;color:#163b31}
+@media(min-width:701px) and (max-width:1150px){.program-grid>.program-card:last-child{grid-column:1/-1}}
+@media(max-width:700px){.program-grid{grid-template-columns:1fr}}
+.site-header,.site-header.is-scrolled,.detail-page .site-header{background:transparent;border-color:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;box-shadow:none;transition:background-color .22s ease,border-color .22s ease,box-shadow .22s ease}
+.site-header.is-engaged,.site-header:focus-within,.detail-page .site-header.is-engaged,.detail-page .site-header:focus-within{background:#fff;border-color:#163b3112;box-shadow:0 8px 30px #163b3112}
+.site-header.is-engaged nav.is-open,.site-header:focus-within nav.is-open{background:#fff}
+@media(prefers-reduced-motion:reduce){.site-header,.site-header.is-scrolled,.detail-page .site-header{transition:none}}

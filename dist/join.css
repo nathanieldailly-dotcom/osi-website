@@ -1,0 +1,17 @@
+.join-section{position:relative;isolation:isolate;overflow:hidden;padding:80px 0;background:#163b31;scroll-margin-top:0}
+.join-background{position:absolute;inset:0;z-index:-2;width:100%;height:100%;object-fit:cover;object-position:center 40%}
+.join-section:after{content:'';position:absolute;inset:0;z-index:-1;background:#0b211aa8}
+.join-layout{display:grid;grid-template-columns:.9fr 1.1fr;align-items:start;gap:28px}
+.join-intro,.join-form{border:1.5px solid #ffffffe0;border-radius:32px;box-shadow:inset 0 1px 0 #ffffff7a;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);padding:42px}
+.join-intro{background:linear-gradient(130deg,#376347c7,#123b2ee0);color:#fff}
+.join-kicker{font-size:16px;color:#efdb9d;margin-bottom:25px}
+.join-intro h2{font:600 clamp(38px,4.2vw,62px)/1.1 var(--sans);letter-spacing:-.045em;margin-bottom:28px}
+.join-intro>p:last-child{font-size:17px;line-height:1.7;margin:0;color:#f0f4e9}
+.join-form{display:flex;flex-direction:column;background:linear-gradient(130deg,#ffffffe0,#d6dfced9);color:#213b2d}
+.join-form label{font-size:16px;line-height:1.5;margin-bottom:10px}
+.join-form input,.join-form textarea{width:100%;min-width:0;font:16px/1.5 var(--sans);background:#ffffffe0;color:#163b31;border:1.5px solid #ffffffcc;border-radius:15px;padding:14px 17px;margin:0 0 22px;box-sizing:border-box}
+.join-form input{min-height:55px}.join-form textarea{resize:vertical;min-height:145px}
+.join-form input:focus-visible,.join-form textarea:focus-visible{outline:3px solid #315f83;outline-offset:3px}
+.join-form button{align-self:flex-start;border:0;border-radius:999px;background:#20543e;color:#fff;font:600 16px/1.5 var(--sans);padding:16px 25px;cursor:pointer}.join-form button:hover{background:#163b31}
+.join-form .join-form-note,.join-form .join-form-status{font-size:12px;line-height:1.6;margin:14px 0 0;max-width:360px}.join-form-status{font-weight:600}
+@media(max-width:760px){.join-section{padding:60px 0;scroll-margin-top:0}.join-layout{grid-template-columns:1fr;gap:22px}.join-intro,.join-form{padding:30px 25px;border-radius:27px}.join-intro h2{font-size:43px}.join-intro>p:last-child{font-size:15px}.join-kicker{font-size:14px;margin-bottom:20px}.join-form label{font-size:15px}}

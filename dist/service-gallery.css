@@ -1,0 +1,22 @@
+/* Real service moments, with a quiet crossfade and controls. */
+.hero-welcome .service-gallery:after{display:none}
+.service-slide{position:absolute;inset:0;opacity:0;transition:opacity .8s ease;pointer-events:none}
+.service-slide.is-active{opacity:1;z-index:1}
+.service-slide img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 42%}
+.service-slide:after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,#102c2512 25%,#102c2520 40%,#102c25ed 100%)}
+.service-caption{position:absolute;z-index:1;left:25px;right:25px;bottom:78px;color:#fffdf5}
+.service-caption>span{display:block;font-size:10px;letter-spacing:.12em;text-transform:uppercase;margin-bottom:10px;color:#e4edda}
+.service-caption strong{display:block;font-size:clamp(23px,2vw,30px);line-height:1.2;letter-spacing:-.035em;font-weight:600;max-width:370px}
+.service-caption p{font-size:12px;line-height:1.6;margin:11px 0 0;max-width:330px;color:#f1f4eb}
+.service-gallery .aerial-panel-label{z-index:3}
+.service-controls{position:absolute;z-index:3;left:20px;right:25px;bottom:20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.service-dots{display:flex;gap:0}
+.service-dots button{display:grid;place-items:center;width:34px;height:36px;background:none;border:0;color:#fffdf5;cursor:pointer;padding:0}
+.service-dots span{display:block;width:7px;height:7px;border-radius:10px;background:#ffffff70;transition:width .3s,background .3s}
+.service-dots [aria-current="true"] span{width:23px;background:#fffdf5}
+.service-toggle{border:1px solid #ffffff70;border-radius:30px;background:#163b3140;color:#fffdf5;font:inherit;font-size:10px;padding:9px 13px;cursor:pointer}
+.service-toggle:hover{background:#163b31b0}
+.service-gallery button:focus-visible{outline:2px solid #fff;outline-offset:3px}
+@media(max-width:700px){.hero-welcome .service-gallery{height:380px}.service-caption{left:19px;right:19px;bottom:74px}.service-caption strong{font-size:25px}.service-caption p{font-size:11px}.service-controls{left:14px;right:19px;bottom:17px}}
+@media(prefers-reduced-motion:reduce){.service-slide,.service-dots span{transition:none}}
+.service-slide:first-child img{object-position:center 10%}

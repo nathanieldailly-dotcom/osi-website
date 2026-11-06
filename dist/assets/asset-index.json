@@ -1,0 +1,333 @@
+[
+  {
+    "name": "hero",
+    "original": "/Users/nathaniellev/Desktop/Sites/Events/Screenshot 2026-09-04 at 3.47.55\u202fPM.png",
+    "outputs": [
+      {
+        "file": "hero-480.webp",
+        "width": 480,
+        "height": 499,
+        "bytes": 60508
+      },
+      {
+        "file": "hero-900.webp",
+        "width": 900,
+        "height": 936,
+        "bytes": 130712
+      },
+      {
+        "file": "hero-1000.webp",
+        "width": 1000,
+        "height": 1040,
+        "bytes": 149964
+      }
+    ]
+  },
+  {
+    "name": "planting-team",
+    "original": "/Users/nathaniellev/Desktop/Sites/Events/Screenshot 2026-09-04 at 3.47.08\u202fPM.png",
+    "outputs": [
+      {
+        "file": "planting-team-480.webp",
+        "width": 480,
+        "height": 499,
+        "bytes": 57078
+      },
+      {
+        "file": "planting-team-900.webp",
+        "width": 900,
+        "height": 936,
+        "bytes": 126044
+      },
+      {
+        "file": "planting-team-1000.webp",
+        "width": 1000,
+        "height": 1040,
+        "bytes": 145502
+      }
+    ]
+  },
+  {
+    "name": "nature-center",
+    "original": "/Users/nathaniellev/Desktop/Sites/Events/Screenshot 2026-09-04 at 3.47.13\u202fPM.png",
+    "outputs": [
+      {
+        "file": "nature-center-480.webp",
+        "width": 480,
+        "height": 499,
+        "bytes": 54534
+      },
+      {
+        "file": "nature-center-900.webp",
+        "width": 900,
+        "height": 936,
+        "bytes": 118830
+      },
+      {
+        "file": "nature-center-1000.webp",
+        "width": 1000,
+        "height": 1040,
+        "bytes": 135638
+      }
+    ]
+  },
+  {
+    "name": "planting-project",
+    "original": "/Users/nathaniellev/Desktop/Sites/Events/Screenshot 2026-09-04 at 3.47.40\u202fPM.png",
+    "outputs": [
+      {
+        "file": "planting-project-480.webp",
+        "width": 480,
+        "height": 599,
+        "bytes": 88648
+      },
+      {
+        "file": "planting-project-900.webp",
+        "width": 900,
+        "height": 1123,
+        "bytes": 242484
+      },
+      {
+        "file": "planting-project-1318.webp",
+        "width": 1318,
+        "height": 1644,
+        "bytes": 444130
+      }
+    ]
+  },
+  {
+    "name": "protecting-plants",
+    "original": "/Users/nathaniellev/Desktop/Sites/Events/Screenshot 2026-09-04 at 3.47.46\u202fPM.png",
+    "outputs": [
+      {
+        "file": "protecting-plants-480.webp",
+        "width": 480,
+        "height": 499,
+        "bytes": 71486
+      },
+      {
+        "file": "protecting-plants-900.webp",
+        "width": 900,
+        "height": 936,
+        "bytes": 154648
+      },
+      {
+        "file": "protecting-plants-1000.webp",
+        "width": 1000,
+        "height": 1040,
+        "bytes": 177610
+      }
+    ]
+  },
+  {
+    "name": "planting-action",
+    "original": "/Users/nathaniellev/Desktop/Sites/Events/Screenshot 2026-09-04 at 3.47.50\u202fPM.png",
+    "outputs": [
+      {
+        "file": "planting-action-480.webp",
+        "width": 480,
+        "height": 499,
+        "bytes": 66352
+      },
+      {
+        "file": "planting-action-900.webp",
+        "width": 900,
+        "height": 936,
+        "bytes": 145762
+      },
+      {
+        "file": "planting-action-1000.webp",
+        "width": 1000,
+        "height": 1040,
+        "bytes": 168224
+      }
+    ]
+  },
+  {
+    "name": "before-after",
+    "original": "/Users/nathaniellev/Desktop/Sites/Events/Screenshot 2026-09-04 at 3.48.01\u202fPM.png",
+    "outputs": [
+      {
+        "file": "before-after-480.webp",
+        "width": 480,
+        "height": 590,
+        "bytes": 48180
+      },
+      {
+        "file": "before-after-900.webp",
+        "width": 900,
+        "height": 1106,
+        "bytes": 119538
+      },
+      {
+        "file": "before-after-1308.webp",
+        "width": 1308,
+        "height": 1608,
+        "bytes": 199758
+      }
+    ]
+  },
+  {
+    "name": "festival-booth",
+    "original": "/Users/nathaniellev/Desktop/Sites/Events/Screenshot 2026-09-04 at 3.48.22\u202fPM.png",
+    "outputs": [
+      {
+        "file": "festival-booth-480.webp",
+        "width": 480,
+        "height": 622,
+        "bytes": 50016
+      },
+      {
+        "file": "festival-booth-900.webp",
+        "width": 900,
+        "height": 1166,
+        "bytes": 112834
+      },
+      {
+        "file": "festival-booth-1247.webp",
+        "width": 1247,
+        "height": 1615,
+        "bytes": 164602
+      }
+    ]
+  },
+  {
+    "name": "festival-child",
+    "original": "/Users/nathaniellev/Desktop/Sites/Events/Screenshot 2026-09-04 at 3.48.31\u202fPM.png",
+    "outputs": [
+      {
+        "file": "festival-child-480.webp",
+        "width": 480,
+        "height": 647,
+        "bytes": 62464
+      },
+      {
+        "file": "festival-child-900.webp",
+        "width": 900,
+        "height": 1213,
+        "bytes": 149154
+      },
+      {
+        "file": "festival-child-1223.webp",
+        "width": 1223,
+        "height": 1649,
+        "bytes": 214266
+      }
+    ]
+  },
+  {
+    "name": "festival-team",
+    "original": "/Users/nathaniellev/Desktop/Sites/Events/Screenshot 2026-09-04 at 3.48.37\u202fPM.png",
+    "outputs": [
+      {
+        "file": "festival-team-480.webp",
+        "width": 480,
+        "height": 586,
+        "bytes": 34414
+      },
+      {
+        "file": "festival-team-900.webp",
+        "width": 900,
+        "height": 1098,
+        "bytes": 78014
+      },
+      {
+        "file": "festival-team-1308.webp",
+        "width": 1308,
+        "height": 1596,
+        "bytes": 122474
+      }
+    ]
+  },
+  {
+    "name": "harvest-team",
+    "original": "/Users/nathaniellev/Desktop/Sites/OSI/Screenshot 2026-09-24 at 2.34.00\u202fPM.png",
+    "outputs": [
+      {
+        "file": "harvest-team-480.webp",
+        "width": 480,
+        "height": 368,
+        "bytes": 37202
+      },
+      {
+        "file": "harvest-team-564.webp",
+        "width": 564,
+        "height": 432,
+        "bytes": 53300
+      }
+    ]
+  },
+  {
+    "name": "harvest-pepper",
+    "original": "/Users/nathaniellev/Desktop/Sites/OSI/Screenshot 2026-09-24 at 2.34.10\u202fPM.png",
+    "outputs": [
+      {
+        "file": "harvest-pepper-480.webp",
+        "width": 480,
+        "height": 648,
+        "bytes": 59036
+      },
+      {
+        "file": "harvest-pepper-554.webp",
+        "width": 554,
+        "height": 748,
+        "bytes": 76764
+      }
+    ]
+  },
+  {
+    "name": "harvest-crate",
+    "original": "/Users/nathaniellev/Desktop/Sites/OSI/Screenshot 2026-09-24 at 2.34.21\u202fPM.png",
+    "outputs": [
+      {
+        "file": "harvest-crate-480.webp",
+        "width": 480,
+        "height": 661,
+        "bytes": 62322
+      },
+      {
+        "file": "harvest-crate-552.webp",
+        "width": 552,
+        "height": 760,
+        "bytes": 78272
+      }
+    ]
+  },
+  {
+    "name": "logo",
+    "original": "/Users/nathaniellev/Desktop/Sites/Events/Screenshot 2026-09-01 at 3.08.51\u202fPM.png",
+    "outputs": [
+      {
+        "file": "logo-480.webp",
+        "width": 480,
+        "height": 329,
+        "bytes": 6516
+      },
+      {
+        "file": "logo-900.webp",
+        "width": 900,
+        "height": 618,
+        "bytes": 12106
+      },
+      {
+        "file": "logo-1400.webp",
+        "width": 1400,
+        "height": 961,
+        "bytes": 19934
+      }
+    ]
+  },
+  {
+    "name": "bbcc-group",
+    "original": "https://bbcoalition.org/wp-content/uploads/2024/10/BBCC-About-1.jpg",
+    "source": "https://bbcoalition.org/about/",
+    "outputs": [
+      {
+        "file": "bbcc-group.webp",
+        "width": 1024,
+        "height": 650,
+        "bytes": 185924
+      }
+    ]
+  }
+]

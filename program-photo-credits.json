@@ -1,0 +1,21 @@
+{
+  "education": {
+    "type": "OSI supplied photograph",
+    "asset": "festival-child-900.webp"
+  },
+  "community": {
+    "type": "OSI supplied photograph",
+    "asset": "hero-900.webp"
+  },
+  "arts": {
+    "type": "Decorative stock photograph",
+    "source": "https://unsplash.com/photos/a-group-of-paint-brushes-sitting-in-a-glass-container-Ro4u_Y86Kx4",
+    "asset": "program-arts.webp"
+  },
+  "medical": {
+    "type": "Decorative stock photograph",
+    "source": "https://unsplash.com/photos/a-person-wearing-a-white-lab-coat-d2D_OF14-70",
+    "photographer": "Nappy",
+    "asset": "program-medical.webp"
+  }
+}

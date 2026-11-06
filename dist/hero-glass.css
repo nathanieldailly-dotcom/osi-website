@@ -1,0 +1,45 @@
+/* Impact is the opening focus; real service photos stay behind the glass. */
+.hero.hero-welcome.impact-hero{position:relative;isolation:isolate;min-height:100svh;padding:150px 0 100px;background:#163b31;color:#fff;display:grid;align-items:center}
+.impact-hero .hero-backdrop{position:absolute;inset:0;z-index:-2;border:0;border-radius:0;overflow:hidden}
+.impact-hero .service-slide img{object-position:center 42%}
+.impact-hero .service-slide:first-child img{object-position:center 42%}
+.impact-hero .service-slide:after{background:linear-gradient(180deg,#0822186b,#08221885 50%,#082218c9)}
+.impact-hero .impact-content{position:relative;z-index:1;text-align:center;pointer-events:none}
+.impact-content a{pointer-events:auto}
+.impact-hero .impact-content h1{font:500 clamp(24px,2.8vw,38px)/1.25 var(--sans);letter-spacing:-.035em;color:#fff;margin:0 0 32px}
+.impact-hero.hero-welcome .hero-stats{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:20px;width:100%;max-width:none;margin:0;padding:0;border:0}
+.impact-hero.hero-welcome .hero-stats>.glass-panel,.impact-hero.hero-welcome .hero-stats>.glass-panel:first-child{grid-column:span 2;min-height:205px;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px 20px;border:1.5px solid #ffffffa6;border-radius:30px;background:linear-gradient(125deg,#4d725e85,#103c2d9e);backdrop-filter:blur(17px) saturate(115%);-webkit-backdrop-filter:blur(17px) saturate(115%);box-shadow:inset 0 1px 0 #ffffff9c,0 12px 36px #061b3024}
+.impact-hero.hero-welcome .hero-stats>.glass-panel:nth-child(n+4){grid-column:span 3}
+.impact-hero.hero-welcome .hero-stats strong{font:600 clamp(58px,6.8vw,94px)/1.05 var(--sans);letter-spacing:-.065em;color:#fff;margin:0 0 17px}
+.impact-hero.hero-welcome .hero-stats span{font-size:16px;line-height:1.5;color:#f4f7f1;max-width:250px}
+.impact-hero .impact-actions{justify-content:center;margin-top:30px;gap:16px}
+.impact-hero .button.cream{background:#fff;color:#163b31;border:1px solid #fff;border-radius:999px;padding:15px 28px;min-height:52px;font-size:15px}
+.impact-hero .button.cream:hover{background:#e9f0e4}
+.impact-hero .hero-secondary{display:inline-flex;align-items:center;border:1px solid #ffffffa6;background:#ffffff15;color:#fff;border-radius:999px;padding:14px 26px;min-height:52px;font-size:15px}
+.impact-hero .hero-secondary:hover{background:#ffffff30}
+.impact-hero .hero-backdrop{pointer-events:none}
+.impact-hero .service-controls{pointer-events:auto;bottom:25px;left:auto;right:max(40px,calc((100% - 1180px)/2));width:auto;gap:20px}
+.impact-hero a:focus-visible,.impact-hero button:focus-visible{outline:3px solid #fff;outline-offset:5px}
+.mission-section{background:#f7f4ed;color:#163b31;padding:110px 0;min-height:90svh;display:grid;align-items:center;scroll-margin-top:105px}
+.mission-layout{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(270px,1fr);align-items:center;gap:64px}
+.mission-label{font-size:18px;line-height:1.5;margin:0 0 35px;color:#38634b}
+.mission-copy h2{font:500 clamp(44px,5.6vw,80px)/1.16 var(--sans);letter-spacing:-.045em;margin:0}
+.mission-word{position:relative;display:inline;padding:0 .025em .05em;margin:0;border:0;border-radius:0;background:linear-gradient(transparent 62%,#dfbc6c99 62%,#dfbc6c99 92%,transparent 92%);color:inherit;font:inherit;letter-spacing:inherit;line-height:inherit;cursor:pointer;box-decoration-break:clone;-webkit-box-decoration-break:clone;transition:color .2s,background .2s}
+.mission-word:hover,.mission-word[aria-pressed="true"]{color:#2e6945;background:linear-gradient(transparent 58%,#e5b851b3 58%,#e5b851b3 94%,transparent 94%)}
+.mission-word:focus-visible{outline:3px solid #3b6b49;outline-offset:5px;border-radius:5px}
+.mission-detail{overflow:hidden;border:1px solid #fff;border-radius:30px;background:linear-gradient(135deg,#fffdfbf2,#edf1e5e6);box-shadow:0 20px 65px #163b3110}
+.mission-detail[hidden]{display:none}
+.mission-detail img{width:100%;height:220px;object-fit:cover;object-position:center 35%}
+.mission-detail>div{padding:28px}
+.mission-detail h3{font-size:25px;line-height:1.25;margin:0 0 14px}
+.mission-detail p{font-size:16px;line-height:1.7;margin:0 0 20px;color:#4d6153}
+.mission-detail a{font-size:14px;font-weight:600;border-bottom:1px solid #163b3180;padding-bottom:4px}
+@media(prefers-reduced-motion:no-preference){.mission-ready:not(.is-visible) .mission-pop{opacity:0;transform:translateY(45px) scale(.94)}.mission-ready.is-visible .mission-pop{animation:mission-pop .8s cubic-bezier(.16,1.3,.3,1) both}.mission-ready.is-visible .mission-details{animation-delay:.14s}.mission-detail.is-changing{animation:mission-card-pop .36s cubic-bezier(.2,1.2,.4,1) both}}
+@keyframes mission-pop{from{opacity:0;transform:translateY(45px) scale(.94)}to{opacity:1;transform:none}}
+@keyframes mission-card-pop{from{opacity:.2;transform:translateY(12px) scale(.97)}to{opacity:1;transform:none}}
+@supports not (backdrop-filter:blur(1px)){.impact-hero.hero-welcome .hero-stats>.glass-panel{background:#163b31df}}
+@media(max-width:1000px){.mission-layout{gap:35px;grid-template-columns:minmax(0,1.5fr) minmax(260px,1fr)}.mission-copy h2{font-size:clamp(43px,5.6vw,65px)}.impact-hero.hero-welcome .hero-stats>.glass-panel{min-height:190px}.impact-hero.hero-welcome .hero-stats strong{font-size:clamp(52px,7vw,75px)}}
+@media(max-width:700px){.hero.hero-welcome.impact-hero{min-height:100svh;padding:115px 0 95px}.impact-hero .impact-content h1{font-size:27px;margin-bottom:25px}.impact-hero.hero-welcome .hero-stats{grid-template-columns:1fr 1fr;gap:12px}.impact-hero.hero-welcome .hero-stats>.glass-panel,.impact-hero.hero-welcome .hero-stats>.glass-panel:first-child,.impact-hero.hero-welcome .hero-stats>.glass-panel:nth-child(n+4){grid-column:auto;min-height:150px;padding:22px 12px;border:1.5px solid #ffffffa6;border-radius:24px}.impact-hero.hero-welcome .hero-stats>.glass-panel:first-child{grid-column:1/-1;min-height:165px}.impact-hero.hero-welcome .hero-stats>.glass-panel:last-child{grid-column:auto}.impact-hero.hero-welcome .hero-stats strong{font-size:clamp(40px,11vw,59px);margin-bottom:12px}.impact-hero.hero-welcome .hero-stats>.glass-panel:first-child strong{font-size:72px}.impact-hero.hero-welcome .hero-stats span{font-size:13px;max-width:190px}.impact-hero .impact-actions{margin-top:24px;gap:12px}.impact-hero .button.cream,.impact-hero .hero-secondary{font-size:14px;min-height:48px;padding:13px 23px}.impact-hero .service-controls{bottom:20px;right:20px;left:20px;justify-content:space-between}.mission-section{min-height:0;padding:75px 0;scroll-margin-top:90px}.mission-layout{grid-template-columns:1fr;gap:35px}.mission-label{font-size:16px;margin-bottom:25px}.mission-copy h2{font-size:clamp(39px,10.5vw,61px)}.mission-detail{border-radius:26px}.mission-detail img{height:210px}.mission-detail>div{padding:25px}.mission-detail p{font-size:15px}}
+@media(prefers-reduced-motion:reduce){.mission-word{transition:none}.mission-pop,.mission-detail{animation:none!important;transform:none!important;opacity:1!important}}
+/* The photograph fills the full hero, including the taller mobile layout. */
+.hero.impact-hero .hero-backdrop{height:100%;min-height:100%;max-height:none}

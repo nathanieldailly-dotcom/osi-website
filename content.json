@@ -1,0 +1,264 @@
+{
+  "organization": "Oakland Service Initiative",
+  "started": 2023,
+  "contact": {
+    "email": "outdoorserviceinitiative@gmail.com",
+    "instagram": "https://www.instagram.com/oaklandserviceinitiative/"
+  },
+  "impact": {
+    "events": 12,
+    "meals": "5,000+",
+    "hospiceHours": "300+",
+    "plants": "$3,000+",
+    "pvsaAwards": 5,
+    "hospiceHoursCollaborator": "Absolute Home Health and Hospice",
+    "largestEventPeople": "7,000",
+    "totalVolunteerHours": "4,000",
+    "technologyRaised": "$2,000"
+  },
+  "events": [
+    {
+      "id": "year-2023",
+      "date": "2023",
+      "title": "Oakland Service Initiative begins.",
+      "description": "Oakland Service Initiative begins, bringing community service across the Oakland region into focus.",
+      "kind": "founding",
+      "image": "logo",
+      "alt": "Oakland Service Initiative green community O logo with three connected nodes",
+      "source": "User-provided founding year."
+    },
+    {
+      "id": "absolute-event",
+      "title": "Volunteering with Absolute Home Health and Hospice",
+      "description": "OSI volunteers contributed 300+ hours with Absolute Home Health and Hospice, one of our collaborators.",
+      "hours": "300+",
+      "kind": "event",
+      "date": "2024",
+      "link": "https://absolutehhh.com/",
+      "label": "Meet our collaborator",
+      "source": "User-confirmed 2024 volunteering event and 300+ collaborator-specific volunteer hours, October 5, 2026.",
+      "image": "absolute-logo",
+      "alt": "Absolute Home Health and Hospice official logo"
+    },
+    {
+      "id": "year-2026",
+      "date": "May 30–31, 2026",
+      "title": "Rochester Heritage Festival",
+      "description": "The Rochester Heritage Festival, with 7,000 people, was our largest event. OSI volunteers welcomed visitors to planting activities and hands-on learning at our booth.",
+      "kind": "event",
+      "image": "festival-booth",
+      "alt": "An OSI volunteer demonstrates a planting activity to a visitor at the festival booth",
+      "link": "community-events.html",
+      "label": "The festival story",
+      "source": "https://www.instagram.com/oaklandserviceinitiative/p/DYsmQPFpBtU/",
+      "recap": "https://www.instagram.com/oaklandserviceinitiative/p/DZD7jzhjb_3/",
+      "attendanceSource": "User-provided 7,000 people at the largest event, October 4, 2026."
+    },
+    {
+      "id": "burgess-milestone",
+      "date": "June 19–20, 2026",
+      "title": "500 plants. Two days.",
+      "description": "Volunteers planted 500 plants at Burgess-Shadbush Nature Center, putting care for our local environment into action.",
+      "kind": "event",
+      "image": "nature-center",
+      "alt": "Two OSI volunteers plant beside boulders at Burgess-Shadbush Nature Center",
+      "link": "environmental-service.html",
+      "label": "See the planting project",
+      "source": "https://www.instagram.com/oaklandserviceinitiative/p/DaLNCkSEVld/"
+    },
+    {
+      "id": "festival-hills-milestone",
+      "date": "June 24, 2026",
+      "title": "Festival of the Hills",
+      "description": "OSI takes part in Rochester Hills’ community celebration, continuing our local event service.",
+      "kind": "event",
+      "image": "city",
+      "alt": "City of Rochester Hills green and blue tree logo",
+      "link": "https://www.rochesterhills.org/thingstodo/festival_of_the_hills.php",
+      "label": "About the festival",
+      "source": "https://www.rochesterhills.org/thingstodo/festival_of_the_hills.php",
+      "participationSource": "User-confirmed participation."
+    }
+  ],
+  "partners": [
+    {
+      "name": "Absolute Home Health and Hospice",
+      "url": "https://absolutehhh.com/",
+      "relationship": "Health and hospice volunteering"
+    },
+    {
+      "name": "Gleaners",
+      "url": "https://www.gcfb.org/",
+      "relationship": "Food-related volunteer service",
+      "logo": "assets/partner-gleaners.png",
+      "alt": "Gleaners official logo — Feeding people. Nourishing lives.",
+      "width": 492,
+      "height": 255,
+      "imageSource": "https://www.gcfb.org/wp-content/uploads/2026/03/GCFB-Final-Logo_2017_White.png"
+    },
+    {
+      "name": "Rochester Hills",
+      "url": "https://www.rochesterhills.org/",
+      "relationship": "Community event participation"
+    },
+    {
+      "name": "Birmingham Bloomfield Community Coalition (BBCC)",
+      "url": "https://bbcoalition.org/",
+      "relationship": "Volunteer partnership; 40 hours in 2024"
+    }
+  ],
+  "recognition": "OSI members have received five Presidential Volunteer Service Awards.",
+  "learningResource": "https://learn.sparkfun.com/tutorials/getting-started-with-the-microbit/all",
+  "notes": "Impact totals supplied by the user; dated timeline contains only documented events. Museum volunteering appears as an event with a photo; its date has not been supplied. $2,000 has been raised for the micro:bit robotics education project, confirmed by the user on November 3, 2026. Plant value and 500-plant project are separate achievements. Meals total is not attributed solely to Gleaners. The 300+ volunteer hours are with Absolute Home Health and Hospice alone, one of OSI’s collaborators, and are not a total across all collaborators. Absolute volunteering appears as a 2024 event in Our Journey, with its official logo and 300+ volunteer hours. The museum is also a timeline event; neither uses an Also part of our journey block. The 12-event total is unchanged. The user supplied 7,000 people at OSI’s largest event; this is event attendance, not a claim that OSI directly served every attendee. Food assistance and environmental service stories are separate click-through pages; their full content is absent from the home page. The Rochester Heritage Festival story is a separate Community Events subpage, linked from Events and the festival journey entry; its full story and gallery are absent from the home page. OSI has completed 4,000 total volunteer hours, confirmed by the user on October 5, 2026. BBCC service is 40 hours in 2024; these hours are part of the overall total. BBCC is a community partnership, not an event; moved to Community per the user on October 27, 2026.",
+  "undatedEvents": [
+    {
+      "id": "museum-event",
+      "date": null,
+      "title": "Rochester Hills Museum at Van Hoosen Farm",
+      "description": "OSI volunteered at the Rochester Hills Museum at Van Hoosen Farm as part of our community event service.",
+      "kind": "event",
+      "image": "museum",
+      "alt": "The historic farmhouse at Rochester Hills Museum at Van Hoosen Farm, surrounded by trees and gardens",
+      "link": "https://www.rochesterhills.org/departments/parks_and_natural_resources/museum/index.php",
+      "label": "Visit the museum",
+      "source": "User-confirmed museum volunteering event; date not supplied.",
+      "imageSource": "https://www.rochesterhills.org/Image%20Gallery/Museum/Banners/FarmhouseInSpring.jpg"
+    },
+    {
+      "id": "international-academy-food-service-day",
+      "date": null,
+      "title": "International Academy Food Service Day",
+      "description": "OSI participated in Food Service Day with International Academy as part of our food-related community service.",
+      "kind": "event",
+      "image": "international-academy-logo",
+      "alt": "International Academy official IA and globe logo",
+      "link": "https://www.iatoday.org/",
+      "label": "Visit International Academy",
+      "source": "User-confirmed International Academy Food Service Day event, October 5, 2026; event date not supplied.",
+      "imageSource": "https://resources.finalsite.net/images/v1539889099/troyk12mius/muqg3cppsmc4su8yoqwf/internationalacademy-logo.png"
+    }
+  ],
+  "sponsorsAndCommunityPartners": [
+    {
+      "name": "Health and Hospice",
+      "logo": "assets/partner-medical.webp",
+      "alt": "Health and Hospice partner logo with a stethoscope and heart",
+      "width": 244,
+      "height": 240
+    },
+    {
+      "name": "Greater Rochester Heritage Festival",
+      "logo": "assets/partner-heritage-festival.webp",
+      "alt": "Greater Rochester Heritage Festival logo",
+      "width": 360,
+      "height": 206
+    },
+    {
+      "name": "International Academy",
+      "logo": "assets/partner-international-academy.webp",
+      "alt": "International Academy logo",
+      "width": 240,
+      "height": 240
+    },
+    {
+      "name": "Kiwanis International",
+      "logo": "assets/partner-kiwanis.webp",
+      "alt": "Kiwanis International logo",
+      "width": 247,
+      "height": 240
+    },
+    {
+      "name": "Shelby Township",
+      "logo": "assets/partner-shelby-township.webp",
+      "alt": "Shelby Township logo",
+      "width": 280,
+      "height": 240
+    },
+    {
+      "name": "Rochester Hills, Michigan",
+      "logo": "assets/partner-rochester-hills.webp",
+      "alt": "City of Rochester Hills, Michigan logo",
+      "width": 283,
+      "height": 240
+    },
+    {
+      "name": "Magna",
+      "logo": "assets/partner-magna.jpg",
+      "alt": "Magna official logo",
+      "width": 1772,
+      "height": 366,
+      "imageSource": "https://www.magna.com/images/default-source/magna-logo/l-magna-int-rgb-12.jpg"
+    }
+  ],
+  "team": {
+    "members": [
+      {
+        "name": "Amey Asundi",
+        "role": "Founding team",
+        "bio": ""
+      },
+      {
+        "name": "Nathaniel Lev",
+        "role": "Founding team",
+        "bio": ""
+      },
+      {
+        "name": "Kavin S",
+        "role": "Founding team",
+        "bio": ""
+      },
+      {
+        "name": "Rahul",
+        "role": "Founding team",
+        "bio": ""
+      },
+      {
+        "name": "Christain Schneider",
+        "role": "Founding team",
+        "bio": ""
+      }
+    ],
+    "notes": "Founder names confirmed by the user on October 6, 2026. Spelling is preserved as supplied. Individual roles, biographies, and portraits have not been supplied.",
+    "eagleScoutCandidates": [
+      "Amey Asundi",
+      "Davyn Patel",
+      "Oscar Kurth"
+    ],
+    "eagleScoutCandidateSource": "Names and Eagle Scout candidacy confirmed by the user on October 20, 2026.",
+    "leadership": [
+      {
+        "name": "Dean Sawaf",
+        "role": "Director of Communications",
+        "bio": ""
+      }
+    ]
+  },
+  "sponsorSource": {
+    "source": "Original OSI website source, components/osi-site.tsx: partners array and Magna funding statement.",
+    "notes": "The remaining original ribbon entries are preserved, including the medical logo identified by the user as Health and Hospice on October 5, 2026. Magna is included from the separately stated partnership. BTC was removed at the user’s request on October 5, 2026."
+  },
+  "communityPartnerships": [
+    {
+      "id": "bbcc-partnership",
+      "date": "2024",
+      "title": "Volunteer partnership with BBCC",
+      "description": "OSI contributed 40 hours of volunteer service in 2024 through our partnership with Birmingham Bloomfield Community Coalition (BBCC). BBCC supports youth substance abuse prevention, health, and wellness in the Birmingham and Bloomfield communities.",
+      "hours": "40",
+      "kind": "partnership",
+      "link": "https://bbcoalition.org/",
+      "label": "Meet BBCC",
+      "source": "User-confirmed partnership, 2024 year, and 40 volunteer hours, October 5, 2026. Organization context: https://bbcoalition.org/. Latest instruction corrects the earlier draft year of 2025.",
+      "image": "bbcc-group",
+      "alt": "BBCC group photo showing young people and adults gathered indoors, from the coalition’s official website",
+      "imageSource": "https://bbcoalition.org/wp-content/uploads/2024/10/BBCC-About-1.jpg",
+      "imageCreditUrl": "https://bbcoalition.org/about/",
+      "imageCredit": "BBCC group photo"
+    }
+  ],
+  "foundingStory": {
+    "year": 2023,
+    "motivation": "Frustration that too few students were actively involved in the health of Oakland County and their own communities.",
+    "response": "Bring people together to learn, volunteer, and care for the place they call home.",
+    "source": "User-provided founding motivation, November 3, 2026."
+  }
+}

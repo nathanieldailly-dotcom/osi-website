@@ -1,0 +1,1 @@
+Preserves the large Get Involved area and prior footer before the user requested a compact footer on November 3, 2026. Not published. Earlier removed sections remain in ../2026-11-03-homepage-removals/.

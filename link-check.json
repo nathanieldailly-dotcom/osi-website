@@ -1,0 +1,42 @@
+[
+  {
+    "url": "https://absolutehhh.com/",
+    "status": 200,
+    "final": "https://absolutehhh.com/"
+  },
+  {
+    "url": "https://learn.sparkfun.com/tutorials/getting-started-with-the-microbit/all",
+    "status": 200,
+    "final": "https://learn.sparkfun.com/tutorials/getting-started-with-the-microbit/all"
+  },
+  {
+    "url": "https://www.gcfb.org/",
+    "status": 200,
+    "final": "https://www.gcfb.org/"
+  },
+  {
+    "url": "https://www.instagram.com/oaklandserviceinitiative/",
+    "status": 200,
+    "final": "https://www.instagram.com/oaklandserviceinitiative/"
+  },
+  {
+    "url": "https://www.instagram.com/oaklandserviceinitiative/p/DZD7jzhjb_3/",
+    "status": 200,
+    "final": "https://www.instagram.com/oaklandserviceinitiative/p/DZD7jzhjb_3/"
+  },
+  {
+    "url": "https://www.rochesterhills.org/",
+    "status": 200,
+    "final": "https://www.rochesterhills.org/"
+  },
+  {
+    "url": "https://www.rochesterhills.org/departments/parks_and_natural_resources/museum/index.php",
+    "status": 200,
+    "final": "https://www.rochesterhills.org/departments/parks_and_natural_resources/museum/index.php"
+  },
+  {
+    "url": "https://www.rochesterhills.org/thingstodo/festival_of_the_hills.php",
+    "status": 200,
+    "final": "https://www.rochesterhills.org/thingstodo/festival_of_the_hills.php"
+  }
+]

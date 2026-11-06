@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+  (() => {
+    if (!/\/(?:index\.html)?$/.test(location.pathname)) return;
+    document.documentElement.classList.add('site-starting');
+    // Always reveal the site if the opening script or an asset cannot load.
+    setTimeout(() => {
+      document.documentElement.classList.remove('site-starting');
+      document.querySelectorAll('[data-intro-inert]').forEach(element => {
+        element.inert = false;
+        element.removeAttribute('data-intro-inert');
+      });
+    }, 4000);
+  })();
+  </script>
+  <link rel="stylesheet" href="intro.css?v=2">
+  <script defer src="intro.js?v=3"></script>
+  <title>Oakland Service Initiative — Serving Oakland County</title>
+  <meta name="description" content="Serving Oakland County since 2023 through food assistance, education, community events, and health and hospice volunteering.">
+  <meta name="theme-color" content="#12365A">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Oakland Service Initiative">
+  <meta property="og:image" content="https://oakland-service-initiative-preview.lukanatinv.chatgpt.site/assets/osi-community-green.png">
+  <meta property="og:image:width" content="1536">
+  <meta property="og:image:height" content="1024">
+  <meta property="og:image:alt" content="Oakland Service Initiative green community logo">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:title" content="Oakland Service Initiative — Serving Oakland County">
+  <meta property="og:description" content="12 events since 2023. A community connected through service.">
+  <link rel="icon" href="assets/osi-community-green-mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="fonts.css">
+  <link rel="stylesheet" href="motion.css">
+  <link rel="stylesheet" href="collective.css?v=programs-3">
+  <link rel="stylesheet" href="aerial.css">
+  <link rel="stylesheet" href="publish.css">
+  <link rel="stylesheet" href="welcome.css?v=service-gallery">
+  <link rel="stylesheet" href="navigation.css?v=1">
+  <link rel="stylesheet" href="hero-glass.css?v=3">
+  <link rel="stylesheet" href="program-cards.css?v=1">
+  <script defer src="script.js?v=header-click-2"></script>
+  <script defer src="motion.js?v=static-photo-1"></script>
+  <script defer src="mission.js?v=1"></script>
+  <script defer src="program-cards.js?v=1"></script>
+  <link rel="canonical" href="https://oakland-service-initiative-preview.lukanatinv.chatgpt.site/">
+  <meta property="og:url" content="https://oakland-service-initiative-preview.lukanatinv.chatgpt.site/">
+</head>
+<body>
+<div class="site-loader" id="site-loader">
+  <div class="site-loader-content">
+    <div class="loader-brand"><img class="site-loader-logo" src="assets/osi-community-green-mark.svg" width="80" height="80" alt="" fetchpriority="high" decoding="async"><div><strong>OSI</strong><span>Oakland Service Initiative</span></div></div>
+    <progress class="loader-progress" max="100" value="0" aria-label="Loading Oakland Service Initiative"></progress>
+    <p class="visually-hidden" role="status">Loading Oakland Service Initiative</p>
+  </div>
+  <button class="site-loader-skip" type="button">Enter website <span aria-hidden="true">→</span></button>
+</div>
+<a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header">
+  <a href="#home" class="brand" aria-label="Oakland Service Initiative home"><img src="assets/osi-community-green-mark.svg" width="54" height="56" class="brand-community-mark" alt="" decoding="async"><span class="brand-name">Oakland Service Initiative</span></a>
+  <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">Menu <span aria-hidden="true">☰</span></button>
+  <nav id="navigation" aria-label="Main navigation">
+    <a href="#about">About</a><a href="#work">Programs</a><a href="events.html">Events</a><a href="meet-the-team.html">Team</a><a href="#partners">Partners</a><a class="nav-cta" href="#involved">Get Involved</a>
+  </nav>
+</header>
+<main id="main" tabindex="-1">
+<section id="home" tabindex="-1" class="hero hero-welcome impact-hero">
+<div class="hero-backdrop hero-photo"><img class="hero-background-photo" src="assets/festival-child-1223.webp" width="1223" height="1649" alt="Amey helping a child at the Rochester Heritage Festival, with an American flag behind them" fetchpriority="high" decoding="async"></div>
+  <div class="impact-content wrap">
+    <h1>Our impact, together.</h1>
+    <div class="hero-stats" aria-label="OSI impact">
+      <div class="glass-panel"><strong>4,000</strong><span>total volunteer hours</span></div>
+      <div class="glass-panel"><strong>5,000+</strong><span>meals helped prepare or create</span></div>
+      <div class="glass-panel"><strong>7,000</strong><span>people at our largest event</span></div>
+      <div class="glass-panel"><strong>12</strong><span>events since 2023</span></div>
+      <div class="glass-panel"><strong>$3,000+</strong><span>worth of plants planted</span></div>
+    </div>
+    <div class="actions impact-actions"><a class="button cream" href="#involved">Join us</a><a class="hero-secondary" href="#mission">Our mission</a></div>
+  </div>
+</section>
+<section id="mission" tabindex="-1" class="mission-section" aria-labelledby="mission-label">
+  <div class="wrap mission-layout">
+    <div class="mission-copy mission-pop"><p id="mission-label" class="mission-label">Our mission</p>
+      <h2>We serve Oakland County through <button type="button" class="mission-word" data-mission="education" aria-pressed="true" aria-controls="mission-education">education</button>, <button type="button" class="mission-word" data-mission="hospitality" aria-pressed="false" aria-controls="mission-hospitality">hospitality</button>, and <button type="button" class="mission-word" data-mission="nature" aria-pressed="false" aria-controls="mission-nature">nature</button>.</h2>
+    </div>
+    <div class="mission-details mission-pop" aria-label="Our mission in action">
+      <article class="mission-detail mission-device" id="mission-education"><img src="assets/microbit-board.png" width="447" height="447" loading="lazy" alt="BBC micro:bit robotics learning board"><div><h3>Education</h3><p>Robotics teaching using micro:bits for schools in Oakland County. We’ve raised $2,000 for this project.</p><a href="education.html">Explore education</a></div></article>
+      <article class="mission-detail mission-logo" id="mission-hospitality" hidden><img src="assets/absolute-logo.webp" width="334" height="148" loading="lazy" alt="Absolute Home Health and Hospice logo"><div><h3>Hospitality</h3><p>Email OSI for training information about health and hospice volunteering and opportunities to support and care for patients.</p><a href="medical.html">Explore health and hospice volunteering</a></div></article>
+      <article class="mission-detail" id="mission-nature" hidden><img src="assets/planting-action-900.webp" width="900" height="936" loading="lazy" alt="Two volunteers working together in a community planting bed"><div><h3>Nature</h3><p>Planting and protecting local green spaces, including 500 plants added at Burgess-Shadbush Nature Center in two days.</p><a href="environmental-service.html">Explore environmental service</a></div></article>
+    </div>
+  </div>
+</section>
+<section id="work" tabindex="-1" class="service-programs section" aria-labelledby="programs-title"><div class="wrap">
+  <p class="programs-kicker">What we do</p><h2 id="programs-title">Four ways to serve.<br>One shared community.</h2>
+  <div class="service-card-grid">
+    <details class="service-card service-card-education"><summary><img src="assets/microbit-board.png" width="447" height="447" loading="lazy" alt="A BBC micro:bit board for hands-on robotics learning"><h3>Education</h3><span class="card-expand" aria-hidden="true"></span></summary><div class="service-card-info"><p>Robotics teaching using micro:bits for schools across Oakland County.</p><p>We’ve raised <strong>$2,000</strong> for this project. Email us if your school would like to participate.</p><div class="card-actions"><a class="card-email" href="mailto:outdoorserviceinitiative@gmail.com?subject=School%20participation%20in%20micro%3Abit%20robotics">Email OSI</a><a href="education.html">Explore education</a></div></div></details>
+    <details class="service-card service-card-community"><summary><img src="assets/festival-child-900.webp" width="900" height="1213" loading="lazy" alt="Amey helping a child with an activity at the Rochester Heritage Festival"><h3>Community</h3><span class="card-expand" aria-hidden="true"></span></summary><div class="service-card-info"><p>Helping host events across Oakland County, including the <strong>Rochester Heritage Festival</strong>.</p><p>Bringing neighbors together through hands-on activities and community service.</p><div class="card-actions"><a href="community-events.html">Explore community events</a><a href="community.html">More community service</a></div></div></details>
+    <details class="service-card service-card-nature"><summary><img src="assets/hero-1000.webp" width="1000" height="1040" loading="lazy" alt="OSI volunteers planting together in a community garden bed"><h3>Nature</h3><span class="card-expand" aria-hidden="true"></span></summary><div class="service-card-info"><p>Planting and caring for local green spaces, with <strong>$3,000+ worth of plants planted</strong> across our environmental work.</p><p>At Burgess-Shadbush Nature Center, volunteers planted 500 plants in two days.</p><div class="card-actions"><a href="environmental-service.html">Explore environmental service</a></div></div></details>
+    <details class="service-card service-card-hospitality"><summary><img src="assets/absolute-logo.webp" width="334" height="148" loading="lazy" alt="Absolute Home Health and Hospice logo"><h3>Hospitality</h3><span class="card-expand" aria-hidden="true"></span></summary><div class="service-card-info"><p>Interested in caring for patients through health and hospice volunteering?</p><p>Email OSI to receive training information and learn how to get involved in volunteering in the medical field.</p><div class="card-actions"><a class="card-email" href="mailto:outdoorserviceinitiative@gmail.com?subject=Health%20and%20hospice%20volunteer%20training">Email OSI about training</a><a href="medical.html">Explore medical volunteering</a></div></div></details>
+  </div>
+<div class="explore-links"><a href="events.html"><span class="eyebrow">Our events</span><h3>See service in action.</h3><p>Explore our volunteer projects and the Rochester Heritage Festival.</p><span class="explore-arrow" aria-hidden="true">↗</span></a><a href="meet-the-team.html"><span class="eyebrow">Our team</span><h3>The people behind OSI.</h3><p>Meet the team building a stronger community, one helping hand at a time.</p><span class="explore-arrow" aria-hidden="true">↗</span></a></div></div></section>
+<section id="about" tabindex="-1" class="about cream-bg section">
+  <div class="wrap two-columns">
+    <div class="about-copy reveal"><p class="eyebrow">01 / Who we are</p><h2>Our community is stronger<br>when we <em>show up.</em></h2><p class="lead">Since 2023, OSI has brought people together to serve Oakland County.</p><p>Our work brings education, community service, and medical volunteering together. From food assistance and planting to the Rochester Heritage Festival and micro:bit learning, each is a way to care for the place we call home.</p><p>Our team includes <a class="scout-inline-link" href="meet-the-team.html#scout-candidates">three Eagle Scout candidates</a>.</p><div class="actions"><a class="text-link" href="#journey">Follow our journey</a><a class="text-link" href="meet-the-team.html">Meet the Team</a></div></div>
+    <div class="about-composition reveal"><figure class="about-field"><img src="assets/harvest-team-480.webp" srcset="assets/harvest-team-480.webp 480w, assets/harvest-team-564.webp 564w" sizes="(max-width: 700px) 85vw, 40vw" width="564" height="432" alt="Three volunteers in a field with gloves and harvested produce" class="" loading="lazy" decoding="async"><figcaption>Time together. Service that matters.</figcaption></figure><figure class="about-plant"><img src="assets/planting-team-900.webp" srcset="assets/planting-team-480.webp 480w, assets/planting-team-900.webp 900w, assets/planting-team-1000.webp 1000w" sizes="(max-width: 700px) 85vw, 40vw" width="1000" height="1040" alt="Two volunteers tending a planting bed with yellow gloves" class="" loading="lazy" decoding="async"><figcaption>Showing up for our neighbors.</figcaption></figure><span class="about-badge">Since<br><strong>2023</strong></span></div>
+  </div>
+  <div class="wrap service-links" aria-label="Explore our service areas"><a href="food-assistance.html">Food assistance</a><a href="environmental-service.html">Environmental service</a><a href="medical.html">Medical volunteering</a><a href="community-events.html">Community events</a><a href="education.html">Education</a></div>
+</section>
+<section id="journey" tabindex="-1" class="journey sage-bg section">
+  <div class="wrap journey-heading"><div><p class="eyebrow">03 / Our journey</p><h2>Small beginnings.<br><em>Growing together.</em></h2></div><div class="journey-total"><strong>12</strong><p>events since 2023</p><span>Moments from our service journey.</span></div></div>
+  <div class="wrap timeline"><article id="year-2023" class="timeline-entry reveal" tabindex="-1"><figure class="timeline-picture founding"><img src="assets/osi-community-green.png" srcset="assets/osi-community-green.png 1536w" sizes="(max-width: 700px) 85vw, 40vw" width="1536" height="1024" alt="Oakland Service Initiative green community O logo with three connected nodes" class="" loading="lazy" decoding="async"></figure><div class="timeline-copy"><p class="eyebrow">2023</p><h3>Oakland Service Initiative begins.</h3><p>Oakland Service Initiative begins, bringing community service across the Oakland region into focus.</p></div></article>
+<article id="absolute-event" class="timeline-entry reveal" tabindex="-1"><figure class="timeline-picture collaborator"><img src="assets/absolute-logo.webp" srcset="assets/absolute-logo.webp 334w" sizes="(max-width: 700px) 85vw, 40vw" width="334" height="148" alt="Absolute Home Health and Hospice official logo" class="" loading="lazy" decoding="async"></figure><div class="timeline-copy"><p class="eyebrow">2024</p><h3>Volunteering with Absolute Home Health and Hospice</h3><div class="event-hours"><strong>300+</strong><span>volunteer hours</span></div><p>OSI volunteers contributed 300+ hours with Absolute Home Health and Hospice, one of our collaborators.</p><a class="text-link" href="https://absolutehhh.com/" target="_blank" rel="noopener noreferrer">Meet our collaborator</a></div></article>
+<article id="year-2026" class="timeline-entry reveal" tabindex="-1"><figure class="timeline-picture "><img src="assets/festival-booth-900.webp" srcset="assets/festival-booth-480.webp 480w, assets/festival-booth-900.webp 900w, assets/festival-booth-1247.webp 1247w" sizes="(max-width: 700px) 85vw, 40vw" width="1247" height="1615" alt="An OSI volunteer demonstrates a planting activity to a visitor at the festival booth" class="" loading="lazy" decoding="async"></figure><div class="timeline-copy"><p class="eyebrow">May 30–31, 2026</p><h3>Rochester Heritage Festival</h3><p>The Rochester Heritage Festival, with 7,000 people, was our largest event. OSI volunteers welcomed visitors to planting activities and hands-on learning at our booth.</p><a class="text-link" href="community-events.html">The festival story</a></div></article>
+<article id="burgess-milestone" class="timeline-entry reveal" tabindex="-1"><figure class="timeline-picture "><img src="assets/nature-center-900.webp" srcset="assets/nature-center-480.webp 480w, assets/nature-center-900.webp 900w, assets/nature-center-1000.webp 1000w" sizes="(max-width: 700px) 85vw, 40vw" width="1000" height="1040" alt="Two OSI volunteers plant beside boulders at Burgess-Shadbush Nature Center" class="" loading="lazy" decoding="async"></figure><div class="timeline-copy"><p class="eyebrow">June 19–20, 2026</p><h3>500 plants. Two days.</h3><p>Volunteers planted 500 plants at Burgess-Shadbush Nature Center, putting care for our local environment into action.</p><a class="text-link" href="environmental-service.html">See the planting project</a></div></article>
+<article id="festival-hills-milestone" class="timeline-entry reveal" tabindex="-1"><figure class="timeline-picture city"><img src="assets/rochester-hills.webp" srcset="assets/rochester-hills.webp 420w" sizes="160px" width="420" height="357" alt="City of Rochester Hills green and blue tree logo" class="" loading="lazy" decoding="async"></figure><div class="timeline-copy"><p class="eyebrow">June 24, 2026</p><h3>Festival of the Hills</h3><p>OSI takes part in Rochester Hills’ community celebration, continuing our local event service.</p><a class="text-link" href="https://www.rochesterhills.org/thingstodo/festival_of_the_hills.php" target="_blank" rel="noopener noreferrer">About the festival</a></div></article>
+<article id="museum-event" class="timeline-entry reveal" tabindex="-1"><figure class="timeline-picture museum"><img src="assets/museum-farmhouse.webp" srcset="assets/museum-farmhouse.webp 784w" sizes="(max-width: 700px) 85vw, 40vw" width="784" height="500" alt="The historic farmhouse at Rochester Hills Museum at Van Hoosen Farm, surrounded by trees and gardens" class="" loading="lazy" decoding="async"></figure><div class="timeline-copy"><p class="eyebrow">Community volunteering</p><h3>Rochester Hills Museum at Van Hoosen Farm</h3><p>OSI volunteered at the Rochester Hills Museum at Van Hoosen Farm as part of our community event service.</p><a class="text-link" href="https://www.rochesterhills.org/departments/parks_and_natural_resources/museum/index.php" target="_blank" rel="noopener noreferrer">Visit the museum</a></div></article>
+<article id="international-academy-food-service-day" class="timeline-entry reveal" tabindex="-1"><figure class="timeline-picture collaborator"><img src="assets/international-academy-logo.webp" srcset="assets/international-academy-logo.webp 192w" sizes="(max-width: 700px) 85vw, 40vw" width="192" height="182" alt="International Academy official IA and globe logo" class="" loading="lazy" decoding="async"></figure><div class="timeline-copy"><p class="eyebrow">Community volunteering</p><h3>International Academy Food Service Day</h3><p>OSI participated in Food Service Day with International Academy as part of our food-related community service.</p><a class="text-link" href="https://www.iatoday.org/" target="_blank" rel="noopener noreferrer">Visit International Academy</a></div></article></div>
+</section>
+
+
+
+
+<section id="partners" tabindex="-1" class="partners cream-bg section"><div class="wrap partners-heading"><p class="eyebrow">04 / Partners & recognition</p><h2>Connected through <em>service.</em></h2><p>The organizations and communities that are part of our work.</p></div><div class="wrap partner-strip"><a href="https://absolutehhh.com/" target="_blank" rel="noopener noreferrer"><img class="absolute-logo" src="assets/absolute-logo.webp" width="334" height="148" loading="lazy" alt="Absolute Home Health and Hospice official logo"><small>Health & hospice volunteering</small></a><a href="https://www.gcfb.org/" target="_blank" rel="noopener noreferrer"><img class="gleaners-logo" src="assets/partner-gleaners.png" width="492" height="255" loading="lazy" decoding="async" alt="Gleaners official logo — Feeding people. Nourishing lives."><span>Food-related volunteer service</span><small>Explore the organization</small></a><a href="https://www.rochesterhills.org/" target="_blank" rel="noopener noreferrer" class="city-partner"><img src="assets/rochester-hills.webp" srcset="assets/rochester-hills.webp 420w" sizes="160px" width="420" height="357" alt="City of Rochester Hills tree logo" class="" loading="lazy" decoding="async"><span>Community event participation</span><small>Visit Rochester Hills</small></a></div><div class="wrap sponsor-section" id="sponsors" tabindex="-1"><h3>Sponsors &amp; community partners</h3><p>Thank you to the supporters who help make our service possible.</p><ul class="sponsor-list"><li><span class="sponsor-logo"><img src="assets/partner-medical.webp" width="244" height="240" alt="Health and Hospice partner logo with a stethoscope and heart" loading="lazy" decoding="async"></span><strong>Health and Hospice</strong></li><li><span class="sponsor-logo"><img src="assets/partner-heritage-festival.webp" width="360" height="206" alt="Greater Rochester Heritage Festival logo" loading="lazy" decoding="async"></span><strong>Greater Rochester Heritage Festival</strong></li><li><span class="sponsor-logo"><img src="assets/partner-international-academy.webp" width="240" height="240" alt="International Academy logo" loading="lazy" decoding="async"></span><strong>International Academy</strong></li><li><span class="sponsor-logo"><img src="assets/partner-kiwanis.webp" width="247" height="240" alt="Kiwanis International logo" loading="lazy" decoding="async"></span><strong>Kiwanis International</strong></li><li><span class="sponsor-logo"><img src="assets/partner-shelby-township.webp" width="280" height="240" alt="Shelby Township logo" loading="lazy" decoding="async"></span><strong>Shelby Township</strong></li><li><span class="sponsor-logo"><img src="assets/partner-rochester-hills.webp" width="283" height="240" alt="City of Rochester Hills, Michigan logo" loading="lazy" decoding="async"></span><strong>Rochester Hills, Michigan</strong></li><li><span class="sponsor-logo sponsor-logo-wide"><img src="assets/partner-magna.jpg" width="1772" height="366" alt="Magna official logo" loading="lazy" decoding="async"></span><strong>Magna</strong></li></ul></div><div class="wrap recognition" id="recognition"><div class="recognition-number">5<span>×</span></div><div><p class="eyebrow">Recognizing service</p><h3>Presidential Volunteer<br><em>Service Awards</em></h3><p>OSI members have received five Presidential Volunteer Service Awards.</p></div><figure class="recognition-photo"><img src="assets/pvsa-medallions.jpg" width="1803" height="1202" loading="lazy" decoding="async" alt="Silver, gold, and bronze President’s Volunteer Service Award medals with red, white, and blue ribbons"><figcaption>Award medals · Image: <a href="https://www.american.edu/student-affairs/volunteer/pvsa.cfm" target="_blank" rel="noopener noreferrer">American University</a></figcaption></figure></div></section>
+<section id="involved" tabindex="-1" class="involved dark section"><div class="wrap"><p class="eyebrow">05 / Get involved</p><h2>Bring your time.<br>Bring your curiosity.<br><em>Make a difference.</em></h2><div class="involved-bottom"><p>Want to volunteer or learn about our work? Reach out to OSI, or follow along for community service updates.</p><div class="actions"><a class="button cream" href="mailto:outdoorserviceinitiative@gmail.com?subject=Volunteering%20with%20OSI">Email OSI</a><a class="text-link light" href="https://www.instagram.com/oaklandserviceinitiative/" target="_blank" rel="noopener noreferrer">Follow on Instagram</a></div></div><a class="email-address" href="mailto:outdoorserviceinitiative@gmail.com">outdoorserviceinitiative@gmail.com</a></div></section>
+</main>
+<footer class="dark"><div class="wrap footer-top"><a href="#home" class="footer-brand" aria-label="Oakland Service Initiative home"><img src="assets/osi-community-green.png" width="1536" height="1024" class="footer-community-logo" alt="Oakland Service Initiative — green community O emblem with three connected nodes" loading="lazy" decoding="async"></a><p>Serving our community since 2023.</p><a class="text-link light" href="#home">Back to top</a></div><div class="wrap footer-bottom"><span>Care for our community. Grow together.</span><nav aria-label="Footer navigation"><a href="meet-the-team.html">Meet the Team</a><a href="#journey">Our Journey</a><a href="#work">Our Work</a><a href="#involved">Contact</a></nav></div></footer>
+</body>
+</html>
