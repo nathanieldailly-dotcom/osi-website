@@ -9,7 +9,7 @@
 .join-intro>p:last-child{font-size:17px;line-height:1.7;margin:0;color:#f0f4e9}
 .join-form{display:flex;flex-direction:column;background:linear-gradient(130deg,#ffffffe0,#d6dfced9);color:#213b2d}
 .join-form label{font-size:16px;line-height:1.5;margin-bottom:10px}
-.join-form input,.join-form textarea{width:100%;min-width:0;font:16px/1.5 var(--sans);background:#ffffffe0;color:#163b31;border:1.5px solid #ffffffcc;border-radius:15px;padding:14px 17px;margin:0 0 22px;box-sizing:border-box}
+.join-form input,.join-form textarea{width:100%;min-width:0;font:16px/1.5 var(--sans);background:#ffffffe0;color:#163b31;border:1.5px solid #6e8274;border-radius:15px;padding:14px 17px;margin:0 0 22px;box-sizing:border-box}
 .join-form input{min-height:55px}.join-form textarea{resize:vertical;min-height:145px}
 .join-form input:focus-visible,.join-form textarea:focus-visible{outline:3px solid #315f83;outline-offset:3px}
 .join-form button{align-self:flex-start;border:0;border-radius:999px;background:#20543e;color:#fff;font:600 16px/1.5 var(--sans);padding:16px 25px;cursor:pointer}.join-form button:hover{background:#163b31}

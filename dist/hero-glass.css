@@ -43,3 +43,8 @@
 @media(prefers-reduced-motion:reduce){.mission-word{transition:none}.mission-pop,.mission-detail{animation:none!important;transform:none!important;opacity:1!important}}
 /* The photograph fills the full hero, including the taller mobile layout. */
 .hero.impact-hero .hero-backdrop{height:100%;min-height:100%;max-height:none}
+
+@media (scripting: none) {
+  .mission-detail[hidden] { display: block; }
+  .mission-detail + .mission-detail { margin-top: 16px; }
+}
