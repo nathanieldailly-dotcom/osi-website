@@ -172,9 +172,12 @@ def page_head(template, title, description, path):
   scripts.append('mission.js')
  if path == '/':
   scripts.extend(['join.js', 'program-cards.js'])
+ styles_tag = f'<link rel="stylesheet" href="{versioned_asset("site.css")}">'
+ if path == '/':
+  styles_tag += '\n  <link rel="preload" href="/assets/manrope-normal-600.woff2" as="font" type="font/woff2" crossorigin>'
  tags = {
   'metadata': metadata(title, description, path),
-  'styles': f'<link rel="stylesheet" href="{versioned_asset("site.css")}">',
+  'styles': styles_tag,
   'scripts': '\n  '.join(f'<script defer src="{versioned_asset(name)}"></script>' for name in scripts),
  }
  for name, value in tags.items():

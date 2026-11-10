@@ -60,8 +60,8 @@ h1,h2,h3{font-weight:500;letter-spacing:-.035em}em{font-weight:500}.eyebrow{lett
   .leaf-two,.leaf-four{transform-origin:0 100%;animation-delay:-2s}.leaf-three{animation-delay:-4s}
   .growth-ripple{transform-origin:300px 300px;animation:ripple 6s ease-in-out infinite}
   .growth-spark{animation:spark 5s ease-in-out infinite}.spark-two{animation-delay:-2s}.spark-three{animation-delay:-3s}.spark-four{animation-delay:-1s}
-  .hero-copy>.eyebrow,.hero-copy h1,.hero-intro,.hero-copy>.actions,.hero-stats:not(.impact-content .hero-stats){animation:hero-enter 1s cubic-bezier(.22,1,.36,1) both}
-  .hero-copy h1{animation-delay:.12s}.hero-intro{animation-delay:.24s}.hero-copy>.actions{animation-delay:.36s}.hero-stats:not(.impact-content .hero-stats){animation-delay:.48s}.hero-art{animation:hero-enter 1.6s .3s both}
+  .hero-copy>.eyebrow,.hero-copy h1,.hero-intro,.hero-copy>.actions,.hero-stats{animation:hero-enter 1s cubic-bezier(.22,1,.36,1) both}
+  .hero-copy h1{animation-delay:.12s}.hero-intro{animation-delay:.24s}.hero-copy>.actions{animation-delay:.36s}.hero-stats{animation-delay:.48s}.hero-art{animation:hero-enter 1.6s .3s both}
   .reveal.arrived{animation:section-enter .85s cubic-bezier(.22,1,.36,1) both}
   @view-transition{navigation:auto}
   ::view-transition-old(root){animation:page-out .2s ease both}::view-transition-new(root){animation:page-in .4s ease both}
