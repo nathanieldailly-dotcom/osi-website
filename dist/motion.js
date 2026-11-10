@@ -41,7 +41,7 @@
     else { glow.style.transform = `translate3d(${x}px, ${y}px, 0)`; frame = 0; }
   }
   document.addEventListener('pointermove', event => {
-    if (!fine.matches || reduced.matches || event.pointerType !== 'mouse' || event.target.closest('.site-loader,input,textarea,[contenteditable="true"]')) { hide(); return; }
+    if (!fine.matches || reduced.matches || event.pointerType !== 'mouse' || event.target.closest('input,textarea,[contenteditable="true"]')) { hide(); return; }
     x = event.clientX; y = event.clientY;
     if (!initialized) { currentX = x; currentY = y; initialized = true; glow.style.transform = `translate3d(${x}px, ${y}px, 0)`; }
     glow.classList.add('is-visible');
@@ -54,30 +54,4 @@
   document.addEventListener('keydown', event => { if (event.key === 'Tab') hide(); });
   fine.addEventListener('change', hide);
   reduced.addEventListener('change', hide);
-})();
-
-// Keep normal document navigation; add slides where native page transitions are unavailable.
-(() => {
-  if ('onpagereveal' in window) return;
-  const preference = matchMedia('(prefers-reduced-motion: reduce)');
-  document.body.classList.add('page-slide-fallback');
-  let navigating = false;
-  window.addEventListener('pageshow', () => {
-    navigating = false;
-    document.body.classList.remove('page-slide-out');
-  });
-  document.addEventListener('click', event => {
-    if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey || preference.matches) return;
-    const link = event.target.closest('a[href]');
-    if (!link || link.hasAttribute('download') || (link.target && link.target !== '_self')) return;
-    const destination = new URL(link.href, location.href);
-    if (destination.origin !== location.origin || !/^https?:$/.test(destination.protocol)) return;
-    if (destination.pathname === location.pathname && destination.search === location.search) return;
-    if (!destination.pathname.endsWith('.html') && !destination.pathname.endsWith('/')) return;
-    if (navigating) return;
-    event.preventDefault();
-    navigating = true;
-    document.body.classList.add('page-slide-out');
-    setTimeout(() => location.assign(destination.href), 180);
-  });
 })();

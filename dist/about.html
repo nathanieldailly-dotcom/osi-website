@@ -3,64 +3,40 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script>
-  (() => {
-    if (!/\/(?:index\.html)?$/.test(location.pathname)) return;
-    document.documentElement.classList.add('site-starting');
-    // Always reveal the site if the opening script or an asset cannot load.
-    setTimeout(() => {
-      document.documentElement.classList.remove('site-starting');
-      document.querySelectorAll('[data-intro-inert]').forEach(element => {
-        element.inert = false;
-        element.removeAttribute('data-intro-inert');
-      });
-    }, 4000);
-  })();
-  </script>
-  <link rel="stylesheet" href="intro.css?v=3">
-  <script defer src="intro.js?v=5"></script>
-  <title>Why We Started — Oakland Service Initiative</title>
-  <meta name="description" content="OSI began in 2023 to turn concern for Oakland County’s health and community into action through education, hospitality, and nature.">
-  <meta name="theme-color" content="#12365A">
+  <meta name="theme-color" content="#163b31">
+  <title>Our Oakland County Mission | Oakland Service Initiative</title>
+  <meta name="description" content="Discover why Oakland Service Initiative began in 2023 and how education, hospitality, and nature guide its work in Oakland County.">
+  <link rel="canonical" href="https://oaklandserviceinitiative.com/about">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Oakland Service Initiative">
-  <meta property="og:image" content="https://oakland-service-initiative-preview.lukanatinv.chatgpt.site/assets/osi-community-green.png">
-  <meta property="og:image:width" content="1536">
-  <meta property="og:image:height" content="1024">
+  <meta property="og:title" content="Our Oakland County Mission | Oakland Service Initiative">
+  <meta property="og:description" content="Discover why Oakland Service Initiative began in 2023 and how education, hospitality, and nature guide its work in Oakland County.">
+  <meta property="og:url" content="https://oaklandserviceinitiative.com/about">
+  <meta property="og:image" content="https://oaklandserviceinitiative.com/assets/osi-social.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
   <meta property="og:image:alt" content="Oakland Service Initiative green community logo">
   <meta name="twitter:card" content="summary_large_image">
-  <meta property="og:title" content="Why We Started — Oakland Service Initiative">
-  <meta property="og:description" content="OSI began in 2023 to turn concern for Oakland County’s health and community into action through education, hospitality, and nature.">
-  <link rel="icon" href="assets/osi-community-green-mark.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="fonts.css">
-  <link rel="stylesheet" href="motion.css?v=soft-glow-1">
-  <link rel="stylesheet" href="collective.css?v=programs-3">
-  <link rel="stylesheet" href="aerial.css">
-  <link rel="stylesheet" href="publish.css">
-  <link rel="stylesheet" href="welcome.css?v=service-gallery">
-  <link rel="stylesheet" href="navigation.css?v=2">
-  <link rel="stylesheet" href="hero-glass.css?v=3">
-  <link rel="stylesheet" href="program-cards.css?v=2">
-  <link rel="stylesheet" href="page-directory.css?v=1">
-  <link rel="stylesheet" href="origin.css?v=1">
-  <link rel="stylesheet" href="join.css?v=1">
-  <script defer src="join.js?v=1"></script>
-  <script defer src="script.js?v=visible-nav-3"></script>
-  <script defer src="motion.js?v=soft-glow-1"></script>
-  <script defer src="mission.js?v=1"></script>
-  <script defer src="program-cards.js?v=1"></script>
-  <link rel="canonical" href="https://oakland-service-initiative-preview.lukanatinv.chatgpt.site/about.html">
-  <meta property="og:url" content="https://oakland-service-initiative-preview.lukanatinv.chatgpt.site/about.html">
+  <meta name="twitter:title" content="Our Oakland County Mission | Oakland Service Initiative">
+  <meta name="twitter:description" content="Discover why Oakland Service Initiative began in 2023 and how education, hospitality, and nature guide its work in Oakland County.">
+  <meta name="twitter:image" content="https://oaklandserviceinitiative.com/assets/osi-social.jpg">
+  <meta name="twitter:image:alt" content="Oakland Service Initiative green community logo">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "AboutPage", "@id": "https://oaklandserviceinitiative.com/about#webpage", "url": "https://oaklandserviceinitiative.com/about", "name": "Our Oakland County Mission | Oakland Service Initiative", "description": "Discover why Oakland Service Initiative began in 2023 and how education, hospitality, and nature guide its work in Oakland County.", "inLanguage": "en", "isPartOf": {"@id": "https://oaklandserviceinitiative.com/#website"}}]}</script>
+  <link rel="icon" href="/assets/osi-favicon.png" type="image/png" sizes="96x96">
+  <link rel="stylesheet" href="/site.css?v=aa10c6154e66">
+  <script defer src="/script.js?v=2e3b87f6ce60"></script>
+  <script defer src="/motion.js?v=ae4a60bde6cb"></script>
+  <script defer src="/mission.js?v=6913beded3e9"></script>
 </head>
 <body class="detail-page story-page"><a class="skip-link" href="#main">Skip to content</a><header class="site-header">
-  <a href="/#home" class="brand" aria-label="Oakland Service Initiative home"><img src="assets/osi-community-green-mark.svg" width="54" height="56" class="brand-community-mark" alt="" decoding="async"><span class="brand-name">Oakland Service Initiative</span></a>
+  <a href="/#home" class="brand" aria-label="Oakland Service Initiative home"><img src="assets/osi-community-green-mark.webp" width="54" height="56" class="brand-community-mark" alt="" decoding="async"><span class="brand-name">Oakland Service Initiative</span></a>
   <nav id="navigation" aria-label="Main navigation">
-    <a href="about.html" aria-current="page">About</a><a href="/#work">Programs</a><a href="events.html">Events</a><a href="meet-the-team.html">Team</a><a href="/#partners">Partners</a>
+    <a href="/about" aria-current="page">About</a><a href="/#work">Programs</a><a href="/events">Events</a><a href="/meet-the-team">Team</a><a href="/#partners">Partners</a>
   </nav>
   <a class="nav-join" href="/#involved">Join OSI</a>
 </header><main id="main" class="detail-main about-main" tabindex="-1"><section class="origin-hero" aria-labelledby="origin-title">
-  <img class="origin-photo" src="assets/nature-center-1000.webp" width="1000" height="1040" alt="Two OSI volunteers caring for a planting bed at Burgess-Shadbush Nature Center" fetchpriority="high" decoding="async">
+  <img class="origin-photo" src="assets/nature-center-1000.webp" srcset="assets/nature-center-480.webp 480w, assets/nature-center-900.webp 900w, assets/nature-center-1000.webp 1000w" sizes="(max-width: 600px) 600px, 100vw" width="1000" height="1040" alt="Two OSI volunteers caring for a planting bed at Burgess-Shadbush Nature Center" fetchpriority="high" decoding="async">
   <div class="wrap origin-copy"><p class="origin-kicker">Why we started / 2023</p><h1 id="origin-title">Care should lead<br>to action.</h1><p>In 2023, we were frustrated that too few students were taking an active role in the health of Oakland County and their own communities.</p><p>Oakland Service Initiative began as a way to turn that concern into action: bringing people together to learn, volunteer, and care for the place we call home.</p></div>
 </section>
 <section id="mission" tabindex="-1" class="mission-section" aria-labelledby="mission-label">
@@ -68,8 +44,8 @@
     <div class="mission-copy mission-pop"><p id="mission-label" class="mission-label">Our mission</p>
       <h2>We serve Oakland County through <button type="button" class="mission-word" data-mission="education" aria-pressed="true" aria-controls="mission-education">education</button>, <button type="button" class="mission-word" data-mission="hospitality" aria-pressed="false" aria-controls="mission-hospitality">hospitality</button>, and <button type="button" class="mission-word" data-mission="nature" aria-pressed="false" aria-controls="mission-nature">nature</button>.</h2>
     </div>
-    <div class="mission-details mission-pop" aria-label="Our mission in action">
-      <article class="mission-detail mission-device" id="mission-education"><img src="assets/microbit-board.png" width="447" height="447" loading="lazy" alt="BBC micro:bit robotics learning board"><div><h3>Education</h3><p>Robotics teaching using micro:bits for schools in Oakland County. We’ve raised $2,000 for this project.</p></div></article>
+    <div class="mission-details mission-pop" role="group" aria-label="Our mission in action">
+      <article class="mission-detail mission-device" id="mission-education"><img src="assets/microbit-board.webp" width="447" height="447" loading="lazy" alt="BBC micro:bit robotics learning board"><div><h3>Education</h3><p>Robotics teaching using micro:bits for schools in Oakland County. We’ve raised $2,000 for this project.</p></div></article>
       <article class="mission-detail mission-logo" id="mission-hospitality" hidden><img src="assets/absolute-logo.webp" width="334" height="148" loading="lazy" alt="Absolute Home Health and Hospice logo"><div><h3>Hospitality</h3><p>Email OSI for training information about health and hospice volunteering and opportunities to support and care for patients.</p></div></article>
       <article class="mission-detail" id="mission-nature" hidden><img src="assets/planting-action-900.webp" width="900" height="936" loading="lazy" alt="Two volunteers working together in a community planting bed"><div><h3>Nature</h3><p>Planting and protecting local green spaces, including 500 plants added at Burgess-Shadbush Nature Center in two days.</p></div></article>
     </div>
@@ -82,7 +58,7 @@
   <article class="origin-practice-card"><img src="assets/protecting-plants-1000.webp" width="1000" height="1040" loading="lazy" alt="Volunteers install protective fencing around a planted area"><div class="origin-glass"><h2>Care for our county.</h2><p>Planting and protecting green spaces turns care for Oakland County into something we can see and help sustain together.</p></div></article>
 </div></section>
 </main><footer id="contact" tabindex="-1" class="compact-footer"><div class="wrap compact-footer-layout">
-  <a class="compact-brand" href="/#home" aria-label="Oakland Service Initiative home"><img src="assets/osi-community-green-mark.svg" width="48" height="50" alt="" loading="lazy"><span><strong>Oakland Service Initiative</strong><small>Serving Oakland County since 2023.</small></span></a>
-  <nav class="compact-footer-nav" aria-label="Footer navigation"><a href="about.html">Why we started</a><a href="events.html">Events</a><a href="meet-the-team.html">Team</a></nav>
+  <a class="compact-brand" href="/#home" aria-label="Oakland Service Initiative home"><img src="assets/osi-community-green-mark.webp" width="48" height="50" alt="" loading="lazy"><span><strong>Oakland Service Initiative</strong><small>Serving Oakland County since 2023.</small></span></a>
+  <nav class="compact-footer-nav" aria-label="Footer navigation"><a href="/about">Why we started</a><a href="/events">Events</a><a href="/meet-the-team">Team</a></nav>
   <div class="compact-footer-contact"><a href="mailto:outdoorserviceinitiative@gmail.com">outdoorserviceinitiative@gmail.com</a><span>Oakland County, Michigan</span><a href="https://www.instagram.com/oaklandserviceinitiative/" target="_blank" rel="noopener noreferrer">Instagram</a></div>
 </div></footer></body></html>

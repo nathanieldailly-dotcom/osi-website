@@ -2,38 +2,35 @@
 
 Complete editable source for the Oakland Service Initiative website, serving Oakland County through education, hospitality, community events, and nature.
 
-Current website: https://oakland-service-initiative-preview.lukanatinv.chatgpt.site/
+Public website: https://oaklandserviceinitiative.com/
 
 ## Preview the website
 
 The finished website is in `dist/`. It can be served without a build step:
 
 ```sh
-python3 -m http.server 8000 --directory dist
+python3 tools/preview_site.py
 ```
 
-Open http://localhost:8000 in your browser.
+Open http://127.0.0.1:8000 in your browser. The preview server resolves clean URLs such as `/events` to the corresponding HTML files in `dist/`.
 
 ## Edit and rebuild
 
 - `index.template.html`: homepage, shared header, and footer.
 - `*.template.html`: individual page content.
 - `content.json`: impact figures, contact details, event records, and team information.
-- `dist/*.css` and `dist/*.js`: styles and browser interactions.
+- `dist/*.css` and `dist/*.js`: styles and browser interactions. Edit the individual stylesheets and rebuild the generated `dist/site.css`.
 - `dist/assets/`: photos, logos, and fonts.
-- `tools/build_site.py`: generates the pages and sitemap.
+- `tools/build_site.py`: generates the pages, shared stylesheet, sitemap, and robots file.
 - `archive/`: earlier content retained for reference, outside the published website.
 
-To rebuild generated HTML after changing a template or `content.json`:
+Rebuild after changing a template, stylesheet, script, or `content.json`:
 
 ```sh
-python3 -m venv .venv
-source .venv/bin/activate
-python3 -m pip install -r requirements.txt
 python3 tools/build_site.py
 ```
 
-Serve `dist/` using any static web host. If moving to a different domain, update the `origin` value in `tools/build_site.py` and the absolute social image URL in `index.template.html`, then rebuild. Root-relative links assume the website is served at the domain root.
+Serve `dist/` at the domain root using a static host that maps clean URLs to their `.html` files, as on the public site. To change the canonical domain, update `origin` in `tools/build_site.py` and rebuild. The build uses Python’s standard library. The optional original-image preparation script requires Pillow and the original photos.
 
 ## Join form
 

@@ -48,7 +48,7 @@
       "kind": "event",
       "image": "festival-booth",
       "alt": "An OSI volunteer demonstrates a planting activity to a visitor at the festival booth",
-      "link": "community-events.html",
+      "link": "/community-events",
       "label": "The festival story",
       "source": "https://www.instagram.com/oaklandserviceinitiative/p/DYsmQPFpBtU/",
       "recap": "https://www.instagram.com/oaklandserviceinitiative/p/DZD7jzhjb_3/",
@@ -62,7 +62,7 @@
       "kind": "event",
       "image": "nature-center",
       "alt": "Two OSI volunteers plant beside boulders at Burgess-Shadbush Nature Center",
-      "link": "environmental-service.html",
+      "link": "/environmental-service",
       "label": "See the planting project",
       "source": "https://www.instagram.com/oaklandserviceinitiative/p/DaLNCkSEVld/"
     },

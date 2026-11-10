@@ -11,12 +11,25 @@ if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches && 'Intersect
   document.querySelectorAll('.reveal').forEach(element => observer.observe(element));
 }
 
-// Event filters use the documented service categories.
-document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
-  const category = button.dataset.filter;
-  document.querySelectorAll('[data-filter]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
-  document.querySelectorAll('[data-category]').forEach(event => { event.hidden = category !== 'all' && event.dataset.category !== category; });
-}));
+// Event filters are available once their behavior is ready.
+const eventFilters = document.querySelector('.event-filters');
+if (eventFilters) {
+  const buttons = [...eventFilters.querySelectorAll('[data-filter]')];
+  const events = [...document.querySelectorAll('.directory-event[data-category]')];
+  const status = document.querySelector('#event-count');
+  buttons.forEach(button => button.addEventListener('click', () => {
+    const category = button.dataset.filter;
+    buttons.forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+    let visible = 0;
+    events.forEach(event => {
+      event.hidden = category !== 'all' && event.dataset.category !== category;
+      if (!event.hidden) visible += 1;
+    });
+    status.textContent = `${visible} ${visible === 1 ? 'event' : 'events'} shown.`;
+  }));
+  eventFilters.hidden = false;
+}
+
 const siteHeader = document.querySelector('.site-header');
 const updateHeader = () => siteHeader.classList.toggle('is-scrolled', window.scrollY > 40);
 window.addEventListener('scroll', updateHeader, {passive: true});

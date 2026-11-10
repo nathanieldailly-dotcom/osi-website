@@ -1,8 +1,15 @@
 from pathlib import Path
 from html import escape
+from hashlib import sha256
 import json,re
-from PIL import Image
 base=Path(__file__).resolve().parents[1]
+dist = base / 'dist'
+origin = 'https://oaklandserviceinitiative.com'
+site_name = 'Oakland Service Initiative'
+social_image = origin + '/assets/osi-social.jpg'
+home_title = 'Oakland Service Initiative | Oakland County Volunteer Programs'
+home_description = 'Volunteer with Oakland Service Initiative in Oakland County, Michigan. Explore micro:bit education, food assistance, health and hospice volunteering, and local planting projects.'
+
 data=json.loads((base/'content.json').read_text())
 assets=json.loads((base/'dist/assets/asset-index.json').read_text())
 lookup={item['name']:item['outputs'] for item in assets}
@@ -19,8 +26,6 @@ def img(name,alt,cls=''):
  sizesattr='(max-width: 700px) 100vw, 60vw' if name=='hero' else '(max-width: 700px) 85vw, 40vw'
  if name in ['city','logo-mark']: sizesattr='160px'
  return f'<img src="assets/{chosen["file"]}" srcset="{srcset}" sizes="{sizesattr}" width="{largest["width"]}" height="{largest["height"]}" alt="{escape(alt,quote=True)}" class="{cls}" loading="{"eager" if eager else "lazy"}" decoding="async"'+(' fetchpriority="high"' if name=='hero' else '')+'>'
-html=(base/'index.template.html').read_text()
-html=re.sub(r'\{\{image:([^|]+)\|([^|]+)\|([^}]+)?\}\}',lambda m:img(m[1],m[2],m[3] or ''),html)
 entries=[]
 for e in data['events']+data.get('undatedEvents',[]):
  picclass='bbcc-photo' if e['id']=='bbcc-event' else 'founding' if e['kind']=='founding' else ('city' if e.get('image')=='city' else ('collaborator' if e.get('image') in ['absolute-logo','international-academy-logo'] else ('museum' if e.get('image')=='museum' else '')))
@@ -45,11 +50,24 @@ event_cards=[]
 for e in data['events']+data.get('undatedEvents',[]):
  if e['kind']=='founding': continue
  category='medical' if e['id']=='absolute-event' else 'environment' if e['id']=='burgess-milestone' else 'food' if e['id']=='international-academy-food-service-day' else 'community'
- link='medical.html' if category=='medical' else e.get('link','events.html')
- external=' target="_blank" rel="noopener noreferrer"' if link.startswith('https:') else ''
+ link, label = {
+  'medical': ('/medical', 'Explore health and hospice volunteering'),
+  'food': ('/food-assistance', 'Explore food assistance'),
+  'environment': ('/environmental-service', 'See the planting project'),
+ }.get(category, (e.get('link'), e.get('label')))
+ links = []
+ if link:
+  links.append((link, label))
+ if e.get('link', '').startswith('https://') and e['link'] != link:
+  links.append((e['link'], e['label']))
+ event_links = []
+ for url, text in links:
+  external = ' target="_blank" rel="noopener noreferrer"' if url.startswith('https://') else ''
+  event_links.append(f'<a class="text-link" href="{escape(url, quote=True)}"{external}>{escape(text)}</a>')
+ actions = '<div class="event-links">' + ''.join(event_links) + '</div>' if event_links else ''
  visual=img(e['image'],e['alt']) if e.get('image') else '<strong>BBCC</strong><span>Birmingham Bloomfield<br>Community Coalition</span>'
  if e.get('imageCreditUrl'): visual+=f'<p class="image-credit">{escape(e["imageCredit"])} · <a href="{escape(e["imageCreditUrl"],quote=True)}" target="_blank" rel="noopener noreferrer">Source: BBCC</a></p>'
- event_cards.append(f'<article id="{e["id"]}" class="directory-event" data-category="{category}"><div class="directory-photo {"bbcc-photo" if e["id"]=="bbcc-event" else "logo-photo" if e.get("image") in ["city","absolute-logo","international-academy-logo"] else ""}">{visual}</div><div class="directory-copy"><p class="eyebrow">{escape(e.get("date") or "Date not recorded")} / {category.title()}</p><h2>{escape(e["title"])}</h2><p>{escape(e["description"])}</p><a class="text-link" href="{escape(link,quote=True)}"{external}>Explore this event</a></div></article>')
+ event_cards.append(f'<article id="{e["id"]}" class="directory-event" data-category="{category}"><div class="directory-photo {"bbcc-photo" if e["id"]=="bbcc-event" else "logo-photo" if e.get("image") in ["city","absolute-logo","international-academy-logo"] else ""}">{visual}</div><div class="directory-copy"><p class="eyebrow">{escape(e.get("date") or "Date not recorded")} / {category.title()}</p><h2>{escape(e["title"])}</h2><p>{escape(e["description"])}</p>{actions}</div></article>')
 scout_profiles=[]
 for candidate in data.get('team',{}).get('eagleScoutCandidates',[]):
  name=escape(candidate)
@@ -80,9 +98,6 @@ values['sponsorList']=''.join(sponsor_items)
 
 heart=[[0,1,0,1,0],[1,1,1,1,1],[1,1,1,1,1],[0,1,1,1,0],[0,0,1,0,0]]
 values['leds']=''.join(f'<rect x="{187+c*30}" y="{115+r*30}" width="16" height="16" rx="3" fill="{"#e8977e" if heart[r][c] else "#52675a"}"/>' for r in range(5) for c in range(5))
-for key,value in values.items():html=html.replace('{{'+key+'}}',str(value))
-assert '{{' not in html, 'Unresolved template placeholder'
-(base/'dist/index.html').write_text(html)
 # Separate story documents use shared navigation and footer, with links back home.
 source_template=(base/'index.template.html').read_text()
 head=source_template.split('<body>',1)[0]
@@ -93,35 +108,115 @@ def home_navigation(markup):
 def render(markup):
  markup=re.sub(r'\{\{image:([^|]+)\|([^|]+)\|([^}]+)?\}\}',lambda m:img(m[1],m[2],m[3] or ''),markup)
  for key,value in values.items(): markup=markup.replace('{{'+key+'}}',str(value))
- assert '{{' not in markup, 'Unresolved story template placeholder'
+ assert '{{' not in markup, 'Unresolved page template placeholder'
  return markup
-stories=[('about','Why We Started','/#work','Our Programs','OSI began in 2023 to turn concern for Oakland County’s health and community into action through education, hospitality, and nature.'),('education','Education','community.html','Explore Community','Hands-on micro:bit education with Oakland Service Initiative.'),('community','Community','events.html','Explore Events','Food assistance, planting, and community events with Oakland Service Initiative.'),('medical','Medical','events.html','Explore Events','Health and hospice volunteering with Absolute Home Health and Hospice.'),('events','Events','/#program-pages','Events & Team','Documented OSI community festivals, food assistance, environmental projects, and medical volunteering.'),('community-events','Community Events','events.html','Explore Events','The Rochester Heritage Festival on May 30–31, 2026. Explore OSI’s planting activities, community connections, and photos from our largest event.'),('food-assistance','Food Assistance','environmental-service.html','Explore Environmental Service','Food assistance through harvesting and volunteering with Gleaners. 5,000+ meals helped prepare or create.'),('environmental-service','Environmental Service','food-assistance.html','Explore Food Assistance','More than $3,000 worth of plants planted. Explore OSI’s 500-plant project at Burgess-Shadbush Nature Center.'),('meet-the-team','Meet the Team','/#involved','Get Involved','Meet the people behind Oakland Service Initiative and its community service in the Oakland region since 2023.')]
-for slug,title,next_url,next_label,description in stories:
- page_head=re.sub(r'<title>.*?</title>','<title>'+title+' — Oakland Service Initiative</title>',head)
- page_head=re.sub(r'<meta name="description" content="[^"]*">','<meta name="description" content="'+escape(description,quote=True)+'">',page_head)
- page_head=re.sub(r'<meta property="og:title" content="[^"]*">','<meta property="og:title" content="'+title+' — Oakland Service Initiative">',page_head)
- page_head=re.sub(r'<meta property="og:description" content="[^"]*">','<meta property="og:description" content="'+escape(description,quote=True)+'">',page_head)
- story=(base/(slug+'.template.html')).read_text()
- page_header=home_navigation(header)
- if slug in ['meet-the-team','events','about']: page_header=page_header.replace('href="'+slug+'.html"','href="'+slug+'.html" aria-current="page"')
- breadcrumb='<a href="/#mission">Our mission</a>' if slug=='meet-the-team' else '<a href="/#work">Our Work</a>'
- next_links='' if slug in ['meet-the-team','about'] else '<div class="wrap detail-next"><a class="button green" href="/#work">Back to Our Work</a><a class="text-link" href="'+next_url+'">'+next_label+'</a></div>'
- if slug=='about':
-  page=page_head+'<body class="detail-page story-page"><a class="skip-link" href="#main">Skip to content</a>'+page_header+'<main id="main" class="detail-main about-main" tabindex="-1">'+story+'</main>'+home_navigation(footer)+'</body></html>'
- else:
-  page=page_head+'<body class="detail-page"><a class="skip-link" href="#main">Skip to content</a>'+page_header+'<main id="main" class="detail-main" tabindex="-1"><nav class="wrap detail-breadcrumb" aria-label="Breadcrumb">'+breadcrumb+'<span aria-hidden="true">/</span><span aria-current="page">'+title+'</span></nav>'+story+next_links+'</main>'+home_navigation(footer).replace('href="/#home">Back to top','href="#main">Back to top')+'</body></html>'
- (base/'dist'/(slug+'.html')).write_text(render(page))
+# Keep the cascade in the same order while serving one cacheable stylesheet.
+style_sources = (
+ 'styles', 'fonts', 'motion', 'collective', 'aerial', 'publish', 'welcome',
+ 'navigation', 'hero-glass', 'program-cards', 'page-directory', 'origin', 'join',
+)
+styles = '\n'.join((dist / f'{name}.css').read_text(encoding='utf-8').rstrip() for name in style_sources) + '\n'
+(dist / 'site.css').write_text(styles, encoding='utf-8')
 
-print('Built static site with',len(entries),'documented timeline entries.')
+def versioned_asset(name):
+ digest = sha256((dist / name).read_bytes()).hexdigest()[:12]
+ return f'/{name}?v={digest}'
 
-origin='https://oakland-service-initiative-preview.lukanatinv.chatgpt.site'
-for page in (base/'dist').glob('*.html'):
- url=origin+('/' if page.name=='index.html' else '/'+page.name)
- markup=page.read_text()
- markup=re.sub(r'\s*<link rel="canonical"[^>]*>','',markup)
- markup=re.sub(r'\s*<meta property="og:url"[^>]*>','',markup)
- markup=markup.replace('</head>','  <link rel="canonical" href="'+url+'">\n  <meta property="og:url" content="'+url+'">\n</head>')
- page.write_text(markup)
-urls=[origin+'/']+[origin+'/'+p.name for p in sorted((base/'dist').glob('*.html')) if p.name!='index.html']
-(base/'dist/sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join('<url><loc>'+url+'</loc></url>' for url in urls)+'</urlset>\n')
-(base/'dist/robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: '+origin+'/sitemap.xml\n')
+def metadata(title, description, path):
+ url = origin + path
+ page_type = {'/about': 'AboutPage', '/events': 'CollectionPage'}.get(path, 'WebPage')
+ graph = [{
+  '@type': page_type,
+  '@id': url + '#webpage',
+  'url': url,
+  'name': title,
+  'description': description,
+  'inLanguage': 'en',
+  'isPartOf': {'@id': origin + '/#website'},
+ }]
+ if path == '/':
+  graph.extend([
+   {'@type': 'WebSite', '@id': origin + '/#website', 'url': url, 'name': site_name,
+    'alternateName': 'OSI', 'publisher': {'@id': origin + '/#organization'}},
+   {'@type': 'Organization', '@id': origin + '/#organization', 'url': url, 'name': site_name,
+    'alternateName': 'OSI', 'logo': origin + '/assets/osi-community-green-mark.webp',
+    'email': data['contact']['email'], 'sameAs': [data['contact']['instagram']],
+    'areaServed': {'@type': 'AdministrativeArea', 'name': 'Oakland County, Michigan'}},
+  ])
+ schema = json.dumps({'@context': 'https://schema.org', '@graph': graph}, ensure_ascii=False)
+ schema = schema.replace('<', r'\u003c')
+ title, description = escape(title, quote=True), escape(description, quote=True)
+ return f'''<title>{title}</title>
+  <meta name="description" content="{description}">
+  <link rel="canonical" href="{url}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="{site_name}">
+  <meta property="og:title" content="{title}">
+  <meta property="og:description" content="{description}">
+  <meta property="og:url" content="{url}">
+  <meta property="og:image" content="{social_image}">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="800">
+  <meta property="og:image:alt" content="Oakland Service Initiative green community logo">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{title}">
+  <meta name="twitter:description" content="{description}">
+  <meta name="twitter:image" content="{social_image}">
+  <meta name="twitter:image:alt" content="Oakland Service Initiative green community logo">
+  <script type="application/ld+json">{schema}</script>'''
+
+def page_head(template, title, description, path):
+ scripts = ['script.js', 'motion.js']
+ if path in ('/', '/about'):
+  scripts.append('mission.js')
+ if path == '/':
+  scripts.extend(['join.js', 'program-cards.js'])
+ tags = {
+  'metadata': metadata(title, description, path),
+  'styles': f'<link rel="stylesheet" href="{versioned_asset("site.css")}">',
+  'scripts': '\n  '.join(f'<script defer src="{versioned_asset(name)}"></script>' for name in scripts),
+ }
+ for name, value in tags.items():
+  template = template.replace('{{' + name + '}}', value)
+ return template
+
+stories = [
+ ('about', 'Why We Started', 'Our Oakland County Mission', '/#work', 'Our Programs', 'Discover why Oakland Service Initiative began in 2023 and how education, hospitality, and nature guide its work in Oakland County.'),
+ ('education', 'Education', 'Micro:bit Robotics Education', '/community', 'Explore Community', 'Explore hands-on robotics and programming with BBC micro:bits, and learn how Oakland County schools can participate with Oakland Service Initiative.'),
+ ('community', 'Community', 'Oakland County Community Service', '/events', 'Explore Events', 'Discover Oakland Service Initiative’s food assistance, local planting projects, and community partnerships, including the Rochester Heritage Festival.'),
+ ('medical', 'Medical', 'Health & Hospice Volunteering', '/events', 'Explore Events', 'Learn about Oakland Service Initiative’s work with Absolute Home Health and Hospice and how to request volunteer training information.'),
+ ('events', 'Events', 'Volunteer Events & Projects', '/#program-pages', 'Events & Team', 'Explore Oakland Service Initiative’s community festivals, food assistance, environmental projects, and health and hospice volunteering.'),
+ ('community-events', 'Community Events', 'Rochester Heritage Festival', '/events', 'Explore Events', 'See how Oakland Service Initiative volunteers shared hands-on planting activities at the Rochester Heritage Festival on May 30–31, 2026.'),
+ ('food-assistance', 'Food Assistance', 'Food Assistance & Harvest Volunteering', '/environmental-service', 'Explore Environmental Service', 'Learn about Oakland Service Initiative’s food assistance through harvesting and volunteering with Gleaners to support the local community.'),
+ ('environmental-service', 'Environmental Service', 'Environmental Service & Planting', '/food-assistance', 'Explore Food Assistance', 'See how Oakland Service Initiative volunteers added 500 plants at Burgess-Shadbush Nature Center in two days and protected the new plantings.'),
+ ('meet-the-team', 'Meet the Team', 'Meet the Team', '/#involved', 'Get Involved', 'Meet the founders, leadership, and volunteers behind Oakland Service Initiative’s community service in Oakland County.'),
+]
+home = page_head(source_template, home_title, home_description, '/')
+(dist / 'index.html').write_text(render(home), encoding='utf-8')
+
+for slug, label, title, next_url, next_label, description in stories:
+ path = '/' + slug
+ metadata_head = page_head(head, title + ' | ' + site_name, description, path)
+ story = (base / (slug + '.template.html')).read_text(encoding='utf-8')
+ page_header = home_navigation(header)
+ if slug in ('meet-the-team', 'events', 'about'):
+  page_header = page_header.replace(f'href="{path}"', f'href="{path}" aria-current="page"')
+ breadcrumb_link = '<a href="/#mission">Our mission</a>' if slug == 'meet-the-team' else '<a href="/#work">Our Work</a>'
+ breadcrumb = '' if slug == 'about' else f'<nav class="wrap detail-breadcrumb" aria-label="Breadcrumb">{breadcrumb_link}<span aria-hidden="true">/</span><span aria-current="page">{label}</span></nav>'
+ next_links = '' if slug in ('meet-the-team', 'about') else f'<div class="wrap detail-next"><a class="button green" href="/#work">Back to Our Work</a><a class="text-link" href="{next_url}">{next_label}</a></div>'
+ body_class = 'detail-page story-page' if slug == 'about' else 'detail-page'
+ main_class = 'detail-main about-main' if slug == 'about' else 'detail-main'
+ page = (
+  metadata_head + f'<body class="{body_class}"><a class="skip-link" href="#main">Skip to content</a>'
+  + page_header + f'<main id="main" class="{main_class}" tabindex="-1">'
+  + breadcrumb + story + next_links + '</main>' + home_navigation(footer) + '</body></html>'
+ )
+ (dist / (slug + '.html')).write_text(render(page), encoding='utf-8')
+
+urls = [origin + '/'] + [origin + '/' + slug for slug, *_ in sorted(stories)]
+sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
+sitemap += ''.join(f'  <url><loc>{url}</loc></url>\n' for url in urls)
+(dist / 'sitemap.xml').write_text(sitemap + '</urlset>\n', encoding='utf-8')
+(dist / 'robots.txt').write_text(f'User-agent: *\nAllow: /\nSitemap: {origin}/sitemap.xml\n', encoding='utf-8')
+print(f'Built {len(urls)} static pages, site.css, sitemap.xml, and robots.txt.')
